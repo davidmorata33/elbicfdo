@@ -1,0 +1,15 @@
+\BOOKMARK [1][-]{section.1}{The problem}{}% 1
+\BOOKMARK [1][-]{section.2}{Mesh generation}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{blockMesh}{section.2}% 3
+\BOOKMARK [3][-]{section*.1}{}{subsection.2.1}% 4
+\BOOKMARK [4][-]{section*.2}{}{section*.1}% 5
+\BOOKMARK [4][-]{section*.3}{}{section*.1}% 6
+\BOOKMARK [4][-]{section*.4}{}{section*.1}% 7
+\BOOKMARK [4][-]{section*.5}{}{section*.1}% 8
+\BOOKMARK [2][-]{subsection.2.2}{Mesh refinement}{section.2}% 9
+\BOOKMARK [3][-]{section*.7}{}{subsection.2.2}% 10
+\BOOKMARK [4][-]{section*.8}{}{section*.7}% 11
+\BOOKMARK [4][-]{section*.9}{}{section*.7}% 12
+\BOOKMARK [3][-]{subsubsection.2.2.1}{Coarse mesh}{subsection.2.2}% 13
+\BOOKMARK [3][-]{subsubsection.2.2.2}{Standard mesh}{subsection.2.2}% 14
+\BOOKMARK [3][-]{subsubsection.2.2.3}{Dense mesh}{subsection.2.2}% 15

@@ -40,12 +40,13 @@ Patches\\*
   patch 0 (start: 72956 size: 2208) name: frontAndBack\\*
   patch 1 (start: 75164 size: 2116) name: inlet\\*
   patch 2 (start: 77280 size: 2116) name: outlet\\
+  \\
   End
 }
 
 
 
-\begin{figure}[h]
+\begin{figure}[h!]
 \includegraphics[scale=0.26]{./mesh/screenshots/blockmesh}
 \centering
 \caption{blockMesh}
@@ -53,4 +54,56 @@ Patches\\*
 
 \subsection{Mesh refinement}
 
-\paragraph{}To refine the mesh, the \textit{snappyHexMesh} utility, included in OpenFoam, is used and several parameters have to be modified in order to obtain a dense mesh that is suitable for the simulation of this complex geometry. Additionally, it has to be considered that a particular geometry is has a relative velocity; this is, the rotor is rotating, and so the first and second stages of the Low Pressure Compressor of the turbofan engine, while the nacelle and the combustor are static. 
+\paragraph{}To refine the mesh, the \textit{snappyHexMesh} utility, included in OpenFoam, which is used and several parameters have to be modified in order to obtain a dense mesh that is suitable for the simulation of this complex geometry. Additionally, it has to be considered that a particular geometry is has a relative velocity; this is, the rotor is rotating, and so the first and second stages of the Low Pressure Compressor of the turbofan engine, while the nacelle and the combustor are static. 
+
+\paragraph{}\textbf{FALTA EXPLICAR SURFACE EXTRACT}
+
+\paragraph{}A comparison between the coarse mesh and the refined mesh generated is presented below.
+
+\subsubsection{Coarse mesh}
+
+\begin{figure}[h!]
+\includegraphics[scale=0.26]{./mesh/screenshots/coarse2}
+\centering
+\caption{Detail of the coarse mesh}
+\end{figure}
+
+\begin{figure}[h!]
+\includegraphics[scale=0.26]{./mesh/screenshots/coarse3}
+\centering
+\caption{Detail of the coarse mesh}
+\end{figure}
+
+\subsubsection{Standard mesh}
+
+\begin{figure}[h!]
+\includegraphics[scale=0.26]{./mesh/screenshots/std2}
+\centering
+\caption{Detail of the standard mesh}
+\end{figure}
+
+\begin{figure}[h!]
+\includegraphics[scale=0.26]{./mesh/screenshots/std3}
+\centering
+\caption{Detail of the standard mesh}
+\end{figure}
+
+\subsubsection{Dense mesh}
+
+\begin{figure}[h!]
+\includegraphics[scale=0.26]{./mesh/screenshots/Xtreme1}
+\centering
+\caption{Detail of the coarse mesh}
+\end{figure}
+
+\begin{figure}[h!]
+\includegraphics[scale=0.26]{./mesh/screenshots/Xtreme3}
+\centering
+\caption{Detail of the dense mesh}
+\end{figure}
+
+\begin{figure}[h!]
+\includegraphics[scale=0.26]{./mesh/screenshots/Xtreme5}
+\centering
+\caption{Detail of the dense mesh}
+\end{figure}
