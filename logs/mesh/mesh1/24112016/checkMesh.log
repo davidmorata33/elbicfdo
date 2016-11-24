@@ -1,0 +1,101 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  4.0                                   |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : 4.0-665f1db4c1f1
+Exec   : checkMesh
+Date   : Nov 24 2016
+Time   : 15:12:47
+Host   : "victorPC"
+PID    : 8141
+Case   : /home/victor/Documents/Git/CFDcourse/project/case/XtremeMesh/turbofan_npv2
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+--> FOAM Warning : 
+    From function static Foam::instantList Foam::timeSelector::select0(Foam::Time&, const Foam::argList&)
+    in file db/Time/timeSelector.C at line 270
+    No time specified or available, selecting 'constant'
+Create polyMesh for time = constant
+
+Time = constant
+
+Mesh stats
+    points:           2431511
+    faces:            5752958
+    internal faces:   5127731
+    cells:            1709112
+    faces per cell:   6.36628
+    boundary patches: 3
+    point zones:      0
+    face zones:       1
+    cell zones:       1
+
+Overall number of cells of each type:
+    hexahedra:     1210719
+    prisms:        90299
+    wedges:        0
+    pyramids:      0
+    tet wedges:    1290
+    tetrahedra:    1
+    polyhedra:     406803
+    Breakdown of polyhedra by number of faces:
+        faces   number of cells
+            4   62851
+            5   64220
+            6   84137
+            7   854
+            8   1856
+            9   109483
+           10   304
+           11   1739
+           12   57791
+           13   238
+           14   523
+           15   20123
+           16   20
+           17   25
+           18   2623
+           21   16
+
+Checking topology...
+    Boundary definition OK.
+    Cell to face addressing OK.
+    Point usage OK.
+    Upper triangular ordering OK.
+    Face vertices OK.
+    Number of regions: 1 (OK).
+
+Checking patch topology for multiply connected surfaces...
+                   Patch    Faces   Points                  Surface topology
+                   inlet     8508    10248  ok (non-closed singly connected)
+                  outlet    11499    15043  ok (non-closed singly connected)
+       NacelleStator.stl   605220   705280  ok (non-closed singly connected)
+
+Checking geometry...
+    Overall domain bounding box (0.77 0.115358 0.106427) (1.35 2.21448 2.20612)
+    Mesh has 3 geometric (non-empty/wedge) directions (1 1 1)
+    Mesh has 3 solution (non-empty) directions (1 1 1)
+    Boundary openness (-4.4113e-17 2.68236e-16 -3.46925e-17) OK.
+    Max cell openness = 4.25869e-16 OK.
+    Max aspect ratio = 9.2159 OK.
+    Minimum face area = 2.00959e-08. Maximum face area = 0.00257407.  Face area magnitudes OK.
+    Min volume = 5.17871e-11. Max volume = 0.000124571.  Total volume = 1.9239.  Cell volumes OK.
+    Mesh non-orthogonality Max: 65.134 average: 15.5999
+    Non-orthogonality check OK.
+    Face pyramids OK.
+    Max skewness = 3.83842 OK.
+    Coupled point location match (average 0) OK.
+
+Mesh OK.
+
+End
+

@@ -1,0 +1,136 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  4.0                                   |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : 4.0-665f1db4c1f1
+Exec   : /opt/openfoam4/platforms/linux64GccDPInt32Opt/bin/surfaceFeatureExtract
+Date   : Nov 24 2016
+Time   : 14:40:52
+Host   : "victorPC"
+PID    : 7557
+Case   : /home/victor/Documents/Git/CFDcourse/project/case/XtremeMesh/turbofan_npv2
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Reading surfaceFeatureExtractDict
+
+Surface            : "NacelleStator.stl"
+
+
+Feature line extraction is only valid on closed manifold surfaces.
+Statistics:
+Triangles    : 35921
+Vertices     : 17384
+Bounding Box : (0.0169931 0.096033 0.0863495) (3.55216 2.23381 2.22613)
+
+
+Constructing feature set from included angle 40
+Selecting edges purely based on geometric tests: yes
+
+Initial feature set:
+    feature points : 90
+    feature edges  : 314
+    of which
+        region edges   : 273
+        external edges : 17
+        internal edges : 24
+
+
+Final feature set:
+    points : 276
+    of which
+        convex             : 0
+        concave            : 0
+        mixed              : 90
+        non-feature        : 186
+    edges  : 314
+    of which
+        external edges     : 17
+        internal edges     : 24
+        flat edges         : 0
+        open edges         : 57
+        multiply connected : 216
+
+Writing extendedFeatureEdgeMesh to "/home/victor/Documents/Git/CFDcourse/project/case/XtremeMesh/turbofan_npv2/constant/extendedFeatureEdgeMesh/NacelleStator.extendedFeatureEdgeMesh"
+
+Writing extendedEdgeMesh components to "/home/victor/Documents/Git/CFDcourse/project/case/XtremeMesh/turbofan_npv2/constant/extendedFeatureEdgeMesh/NacelleStator"
+Writing convex feature points to "/home/victor/Documents/Git/CFDcourse/project/case/XtremeMesh/turbofan_npv2/constant/extendedFeatureEdgeMesh/NacelleStator_convexFeaturePts.obj"
+Writing concave feature points to "/home/victor/Documents/Git/CFDcourse/project/case/XtremeMesh/turbofan_npv2/constant/extendedFeatureEdgeMesh/NacelleStator_concaveFeaturePts.obj"
+Writing mixed feature points to "/home/victor/Documents/Git/CFDcourse/project/case/XtremeMesh/turbofan_npv2/constant/extendedFeatureEdgeMesh/NacelleStator_mixedFeaturePts.obj"
+Writing mixed feature point structure to "/home/victor/Documents/Git/CFDcourse/project/case/XtremeMesh/turbofan_npv2/constant/extendedFeatureEdgeMesh/NacelleStator_mixedFeaturePtsStructure.obj"
+Writing external edges to "/home/victor/Documents/Git/CFDcourse/project/case/XtremeMesh/turbofan_npv2/constant/extendedFeatureEdgeMesh/NacelleStator_externalEdges.obj"
+Writing internal edges to "/home/victor/Documents/Git/CFDcourse/project/case/XtremeMesh/turbofan_npv2/constant/extendedFeatureEdgeMesh/NacelleStator_internalEdges.obj"
+Writing flat edges to "/home/victor/Documents/Git/CFDcourse/project/case/XtremeMesh/turbofan_npv2/constant/extendedFeatureEdgeMesh/NacelleStator_flatEdges.obj"
+Writing open edges to "/home/victor/Documents/Git/CFDcourse/project/case/XtremeMesh/turbofan_npv2/constant/extendedFeatureEdgeMesh/NacelleStator_openEdges.obj"
+Writing multiple edges to "/home/victor/Documents/Git/CFDcourse/project/case/XtremeMesh/turbofan_npv2/constant/extendedFeatureEdgeMesh/NacelleStator_multipleEdges.obj"
+Writing region edges to "/home/victor/Documents/Git/CFDcourse/project/case/XtremeMesh/turbofan_npv2/constant/extendedFeatureEdgeMesh/NacelleStator_regionEdges.obj"
+Writing edge directions to "/home/victor/Documents/Git/CFDcourse/project/case/XtremeMesh/turbofan_npv2/constant/extendedFeatureEdgeMesh/NacelleStator_edgeDirections.obj"
+
+Writing featureEdgeMesh to "/home/victor/Documents/Git/CFDcourse/project/case/XtremeMesh/turbofan_npv2/constant/triSurface/NacelleStator.eMesh"
+
+Surface            : "LPSpool.stl"
+
+
+Feature line extraction is only valid on closed manifold surfaces.
+Statistics:
+Triangles    : 7120
+Vertices     : 3776
+Bounding Box : (0.645568 0.678351 0.676398) (3.26591 1.64517 1.63913)
+
+
+Constructing feature set from included angle 40
+Selecting edges purely based on geometric tests: yes
+
+Initial feature set:
+    feature points : 4
+    feature edges  : 376
+    of which
+        region edges   : 376
+        external edges : 0
+        internal edges : 0
+
+
+Final feature set:
+    points : 372
+    of which
+        convex             : 0
+        concave            : 0
+        mixed              : 4
+        non-feature        : 368
+    edges  : 376
+    of which
+        external edges     : 0
+        internal edges     : 0
+        flat edges         : 0
+        open edges         : 376
+        multiply connected : 0
+
+Writing extendedFeatureEdgeMesh to "/home/victor/Documents/Git/CFDcourse/project/case/XtremeMesh/turbofan_npv2/constant/extendedFeatureEdgeMesh/LPSpool.extendedFeatureEdgeMesh"
+
+Writing extendedEdgeMesh components to "/home/victor/Documents/Git/CFDcourse/project/case/XtremeMesh/turbofan_npv2/constant/extendedFeatureEdgeMesh/LPSpool"
+Writing convex feature points to "/home/victor/Documents/Git/CFDcourse/project/case/XtremeMesh/turbofan_npv2/constant/extendedFeatureEdgeMesh/LPSpool_convexFeaturePts.obj"
+Writing concave feature points to "/home/victor/Documents/Git/CFDcourse/project/case/XtremeMesh/turbofan_npv2/constant/extendedFeatureEdgeMesh/LPSpool_concaveFeaturePts.obj"
+Writing mixed feature points to "/home/victor/Documents/Git/CFDcourse/project/case/XtremeMesh/turbofan_npv2/constant/extendedFeatureEdgeMesh/LPSpool_mixedFeaturePts.obj"
+Writing mixed feature point structure to "/home/victor/Documents/Git/CFDcourse/project/case/XtremeMesh/turbofan_npv2/constant/extendedFeatureEdgeMesh/LPSpool_mixedFeaturePtsStructure.obj"
+Writing external edges to "/home/victor/Documents/Git/CFDcourse/project/case/XtremeMesh/turbofan_npv2/constant/extendedFeatureEdgeMesh/LPSpool_externalEdges.obj"
+Writing internal edges to "/home/victor/Documents/Git/CFDcourse/project/case/XtremeMesh/turbofan_npv2/constant/extendedFeatureEdgeMesh/LPSpool_internalEdges.obj"
+Writing flat edges to "/home/victor/Documents/Git/CFDcourse/project/case/XtremeMesh/turbofan_npv2/constant/extendedFeatureEdgeMesh/LPSpool_flatEdges.obj"
+Writing open edges to "/home/victor/Documents/Git/CFDcourse/project/case/XtremeMesh/turbofan_npv2/constant/extendedFeatureEdgeMesh/LPSpool_openEdges.obj"
+Writing multiple edges to "/home/victor/Documents/Git/CFDcourse/project/case/XtremeMesh/turbofan_npv2/constant/extendedFeatureEdgeMesh/LPSpool_multipleEdges.obj"
+Writing region edges to "/home/victor/Documents/Git/CFDcourse/project/case/XtremeMesh/turbofan_npv2/constant/extendedFeatureEdgeMesh/LPSpool_regionEdges.obj"
+Writing edge directions to "/home/victor/Documents/Git/CFDcourse/project/case/XtremeMesh/turbofan_npv2/constant/extendedFeatureEdgeMesh/LPSpool_edgeDirections.obj"
+
+Writing featureEdgeMesh to "/home/victor/Documents/Git/CFDcourse/project/case/XtremeMesh/turbofan_npv2/constant/triSurface/LPSpool.eMesh"
+
+ExecutionTime = 0.28 s  ClockTime = 0 s
+
+End
+
