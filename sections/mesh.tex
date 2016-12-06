@@ -22,6 +22,87 @@ Only the first two stages of the turbofan engine will be simulated, so we have t
 
 \paragraph{}This basic mesh has been divided every $0.05m$. It means that we have done 12 divisions in the x direction, 46 on the y direction and 46 more on the z direction. Obviously, the vertex numeration has been kept the same as the one that comes as default in every tutorial case; so, it was easier to define the inlet face of the \textit{blockMesh} as well as the outlet face that will be used to define the boundary conditions.
 
+\begin{footnotesize}
+
+\begin{verbatim}
+  
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  4.0                                   |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      blockMeshDict;
+}
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+convertToMeters 1;
+
+vertices
+(
+    (0.77 0   0)
+    (1.35 0   0)
+    (1.35 2.3 0)
+    (0.77 2.3 0)
+    (0.77 0   2.3)
+    (1.35 0   2.3)
+    (1.35 2.3 2.3)
+    (0.77 2.3 2.3)
+);
+
+blocks
+(
+    hex (0 1 2 3 4 5 6 7) (12 46 46) simpleGrading (1 1 1)
+);
+
+edges
+(
+);
+
+boundary
+(
+    frontAndBack
+    {
+        type patch;
+        faces
+        (
+            (3 7 6 2)
+            (1 5 4 0)
+            (0 3 2 1)
+            (4 5 6 7)
+        );
+    }
+    inlet
+    {
+        type patch;
+        faces
+        (
+            (0 4 7 3)
+        );
+    }
+    outlet
+    {
+        type patch;
+        faces
+        (
+            (2 6 5 1)
+        );
+    }
+);
+
+// ************************************************************************* //
+
+\end{verbatim}
+
+\end{footnotesize}
+
 \paragraph{}The log obtained when the mesh has been generated is as follows:
 
 \texttt{\\*
