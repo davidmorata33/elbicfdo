@@ -1,0 +1,45 @@
+\subsection{Rotation}
+\paragraph{}
+How we have explained before, the project is based in the study of a flow inside the first stages of compression of a turbofan engine. Therefore, an important consideration is that the rotor is spinning at high speed. To impose this condition we must work with the Multiple Frame Reference (MRF) method. This method is based on adding source to momentum equation.
+
+\paragraph{}
+We will work with the \textbf{constant/MRFProperties} file and we must change the appropriate parameters. This method is based on the right hand rule, therefore the \textit{axis} of rotation is $(1,0,0)$. We consider that the rotor rotor rotates at 5000 rpm, which is a common value for turbofan engines in flight conditions. It should be noted that the units used must be those of the International System, so we must convert 5000 rpm to $rad/s $. Furthermore, we must indicate the origin point in the axis of rotation, in our case it is (0 1.1675354 1.15542633). Finally, in section nonRotatingPatches we write list of patches that they are not rotating, in our case we only have the NacelleStator.
+
+
+\begin{footnotesize}
+\begin{verbatim}
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  4.0                                   |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      MRFProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+MRF1
+{
+    cellZone    rotor;
+    active      yes;
+
+    // Fixed patches (by default they 'move' with the MRF zone)
+    nonRotatingPatches (
+	NacelleStator.stl
+	);
+
+    origin    (0 1.1675354 1.15542633);
+    axis      (1 0 0);
+    omega     523.5987756;
+}
+
+// ************************************************************************* //
+\end{verbatim}
+\end{footnotesize}

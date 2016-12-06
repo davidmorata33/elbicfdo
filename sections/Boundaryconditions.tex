@@ -1,0 +1,116 @@
+\subsection{Boundary conditions}
+\paragraph{}
+The known initial values of the the pressure and the velocity have to be defined in the program to carry out the simulation.
+
+\paragraph{}
+We consider that the velocity at the output of the mesh, in the direction X, is $30 m/s$. To change this parameter, we have to modify the file \textbf{0.orig/U}.
+
+
+\begin{footnotesize}
+
+\begin{verbatim}
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  4.0                                   |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volVectorField;
+    object      U;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 1 -1 0 0 0 0];
+
+internalField   uniform (0 0 0);
+
+boundaryField
+{
+    LPSpool.stl
+    {
+        type            noSlip;
+    }
+
+    NacelleStator.stl
+    {
+        type            noSlip;
+    }
+
+    inlet
+    {
+        type            fixedValue;
+	value		uniform (30 0 0);
+    }
+
+    outlet
+    {
+        type            zeroGradient;
+    }
+}
+
+// ************************************************************************* //
+
+\end{verbatim}
+
+\end{footnotesize}
+
+\paragraph{}
+Another consideration is that the pressure at the inlet of the mesh is  XXXX. To change this parameter, we have to modify the file \textbf{0.orig/p}.
+
+\begin{footnotesize}
+
+\begin{verbatim}
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  4.0                                   |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    object      p;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 2 -2 0 0 0 0];
+
+internalField   uniform 0;
+
+boundaryField
+{
+    LPSpool.stl
+    {
+        type            zeroGradient;
+    }
+
+    NacelleStator.stl
+    {
+        type            zeroGradient;
+    }
+
+    inlet
+    {
+        type            fixedValue;
+	    value		    uniform 0;
+    }
+
+    outlet
+    {
+        type            zeroGradient;
+    }
+}
+
+// ************************************************************************* //
+
+\end{verbatim}
+
+\end{footnotesize}

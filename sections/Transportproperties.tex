@@ -1,0 +1,74 @@
+\subsection{Properties}
+\paragraph{}
+The properties of the flow have to be defined as explained in the hypothesis section. The \textit{transportModel}is Newtonian and the  kinematic viscosity \textit{nu} is $1.5e-05 m^2/s$ .
+
+\paragraph{}
+To change all these parameters, we have to modify the file \textbf{constant/transportProperties}.
+
+
+\begin{footnotesize}
+\begin{verbatim}
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  4.0                                   |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      transportProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+transportModel  Newtonian;
+
+nu              [0 2 -1 0 0 0 0] 1.5e-05;
+
+// ************************************************************************* //
+\end{verbatim}
+\end{footnotesize}
+
+\paragraph{}
+Another hypothesus made have been that the flow of the simulation is laminar. To impose this hypothesis \textit{simulationType} is laminar.
+
+\paragraph{}
+To change all these parameters, we have to modify the file \textbf{constant/turbulenceProperties}.
+
+
+\begin{footnotesize}
+\begin{verbatim}
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  4.0                                   |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      turbulenceProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+simulationType laminar;
+
+RAS
+{
+    RASModel            kOmegaSST;
+
+    turbulence          on;
+
+    printCoeffs         on;
+}
+
+// ************************************************************************* //
+
+\end{verbatim}
+\end{footnotesize}
