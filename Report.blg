@@ -3,43 +3,44 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Report.aux
 The style file: unsrt.bst
 Database file #1: ./ref/bibliography.bib
-Warning--empty journal in Paterson2010
-Warning--there's a number but no volume in Paterson2010
 Warning--empty journal in Nozaki9240
 Warning--there's a number but no volume in Nozaki9240
+Warning--empty journal in Paterson2010
+Warning--there's a number but no volume in Paterson2010
 Warning--empty journal in Petit2011
 Warning--empty journal in Pieri2014
 Warning--there's a number but no volume in Pieri2014
-You've used 4 entries,
+Warning--empty journal in Casacuberta2014
+You've used 5 entries,
             1791 wiz_defined-function locations,
-            465 strings with 3864 characters,
-and the built_in function-call counts, 565 in all, are:
-= -- 43
-> -- 16
+            469 strings with 3996 characters,
+and the built_in function-call counts, 693 in all, are:
+= -- 53
+> -- 20
 < -- 0
-+ -- 8
-- -- 4
-* -- 29
-:= -- 104
-add.period$ -- 12
-call.type$ -- 4
-change.case$ -- 4
++ -- 10
+- -- 5
+* -- 32
+:= -- 127
+add.period$ -- 15
+call.type$ -- 5
+change.case$ -- 5
 chr.to.int$ -- 0
-cite$ -- 11
-duplicate$ -- 32
-empty$ -- 60
-format.name$ -- 4
-if$ -- 115
+cite$ -- 13
+duplicate$ -- 40
+empty$ -- 74
+format.name$ -- 5
+if$ -- 142
 int.to.chr$ -- 0
-int.to.str$ -- 4
-missing$ -- 4
-newline$ -- 23
-num.names$ -- 4
-pop$ -- 17
+int.to.str$ -- 5
+missing$ -- 5
+newline$ -- 28
+num.names$ -- 5
+pop$ -- 22
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 9
+skip$ -- 12
 stack$ -- 0
 substring$ -- 0
 swap$ -- 0
@@ -47,8 +48,8 @@ text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 7
-while$ -- 4
-width$ -- 5
-write$ -- 41
-(There were 7 warnings)
+warning$ -- 8
+while$ -- 5
+width$ -- 6
+write$ -- 50
+(There were 8 warnings)

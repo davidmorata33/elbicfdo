@@ -1,14 +1,14 @@
 \begin{thebibliography}{1}
 
-\bibitem{Paterson2010}
-Eric Paterson.
-\newblock {PENN STATE The icoFoam “ Cavity Tutorial ”}.
-\newblock (April), 2010.
-
 \bibitem{Nozaki9240}
 Fumiya Nozaki.
 \newblock {CFD for Rotating Machinery}.
 \newblock (May), 9240.
+
+\bibitem{Paterson2010}
+Eric Paterson.
+\newblock {PENN STATE The icoFoam “ Cavity Tutorial ”}.
+\newblock (April), 2010.
 
 \bibitem{Petit2011}
 Olivier Petit.
@@ -19,5 +19,11 @@ Olivier Petit.
 Roberto Pieri.
 \newblock {A tool for pre-processing : snappyHexMesh}.
 \newblock (June), 2014.
+
+\bibitem{Casacuberta2014}
+Jordi Casacuberta.
+\newblock {Study of fluid dynamics applications in the field of engineering by
+  using OpenFOAM}.
+\newblock 2014.
 
 \end{thebibliography}
