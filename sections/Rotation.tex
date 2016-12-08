@@ -1,10 +1,19 @@
 \subsection{Rotation}
-\paragraph{}
-How we have explained before, the project is based in the study of a flow inside the first stages of compression of a turbofan engine. Therefore, an important consideration is that the rotor is spinning at high speed. To impose this condition we must work with the Multiple Frame Reference (MRF) method. This method is based on adding source to momentum equation.
+\paragraph{}An important consideration for this project is that the rotor is spinning at a high speed and this condition has to be somehow communicated to \textit{OpenFOAM}. To work with this condition the Multiple Frame Reference (MFR) method has to be used. The method itself is based on adding a 'source' to the momentum equation in a previously defined zone named 'rotor'. How to do that has been shown in the previous section.
 
-\paragraph{}
-We will work with the \textbf{constant/MRFProperties} file and we must change the appropriate parameters. This method is based on the right hand rule, therefore the \textit{axis} of rotation is $(1,0,0)$. We consider that the rotor rotates at 5000 rpm, which is a common value for turbofan engines in flight conditions. It should be noted that the units used must be those of the International System, so we must convert 5000 $rpm$ to $rad/s$. Furthermore, we must indicate the origin point in the axis of rotation, in our case it is $(0 1.1675354 1.15542633)$. Finally, in section nonRotatingPatches we write the list of patches that they are not rotating, in our case we only have the NacelleStator.
+\paragraph{}The \textbf{constant/MRFProperties} file has to be modified with the appropriate parameters for the case. Since the axis of \textit{OpenFOAM} are based on the right hand rule, the rotation axis must be defined as follows: \textbf{CAMBIAR PER ARA!} $(1,0,0)$. From information that can be found only, it has been chosen 5000 $rpm$ as the angular velocity of the rotor. It should be noted that the units used must be those of the International System, so the 5000 $rpm$ must be converted to $rad/s$. Furthermore, an origin point has to be indicated in the axis of rotation; in this case, the origin point is as follows: $(0 1.1675354 1.15542633)$. 
 
+\paragraph{}Finally, it has to be indicated wheter some geometries are rotating or not. Thus, the next parameter has to be modified:
+
+\begin{footnotesize}
+\begin{verbatim}
+    nonRotatingPatches (
+	NacelleStator.stl
+	);
+\end{verbatim}
+\end{footnotesize}
+
+\paragraph{}So, the file \textbf{constant/MRFProperties} for the current case is the following:
 
 \begin{footnotesize}
 \begin{verbatim}
@@ -43,3 +52,5 @@ MRF1
 // ************************************************************************* //
 \end{verbatim}
 \end{footnotesize}
+
+\paragraph{}It can clearly be seen that the modification of any parameter is pretty straigh-forward in the file since there is no possible confusion with the names.
