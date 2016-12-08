@@ -67,11 +67,13 @@
 \contentsline {subsection}{\numberline {3.6}fvSchemes and fvSolution}{33}{subsection.3.6}
 \contentsline {paragraph}{}{33}{section*.59}
 \contentsline {paragraph}{}{34}{section*.60}
-\contentsline {subsection}{\numberline {3.7} Commands to run the simulation}{37}{subsection.3.7}
+\contentsline {section}{\numberline {4}Simulation of the turbofan}{37}{section.4}
+\contentsline {subsection}{\numberline {4.1}Selection of the solver}{37}{subsection.4.1}
 \contentsline {paragraph}{}{37}{section*.61}
-\contentsline {paragraph}{}{37}{section*.62}
-\contentsline {paragraph}{}{37}{section*.63}
-\contentsline {paragraph}{}{37}{section*.64}
-\contentsline {section}{\numberline {4}Simulation of the turbofan}{38}{section.4}
+\contentsline {subsection}{\numberline {4.2}Commands to run the simulation}{38}{subsection.4.2}
+\contentsline {paragraph}{}{38}{section*.62}
+\contentsline {paragraph}{}{38}{section*.63}
+\contentsline {paragraph}{}{38}{section*.64}
+\contentsline {paragraph}{}{38}{section*.65}
 \contentsline {section}{\numberline {5}Post-process}{39}{section.5}
 \contentsline {section}{\numberline {6}References}{40}{section.6}
