@@ -1,9 +1,13 @@
 \subsection{Mesh generation}
 
+\subsubsection{Selection of the tutorial}
+
+\paragraph{}The first thing that needs to be done is the selection of the tutorial that will work as a base to run the simulation of the case. Among all the tutorials that can be found on the \textit{OpenFOAM} folder, we have selected the \textbf{FALTA!} for several reasons.
+
 \subsubsection{blockMesh}
-\paragraph{}The definition of the \textit{blockMeshDict} is the first part that needs to be defined in order to simulate the case. 
-Only the first two stages of the turbofan engine will be simulated, so we have to make sure that the \textit{blockMesh} includes them.
-\paragraph{}The domain of the mesh is a $0.58$x$2.3$x$2.3m$ rectangular prism and the vertices are as follows:\\
+
+\paragraph{}The definition of the \textit{blockMeshDict} is the first part that needs to be modified. The \textit{blockMesh} must contain the geometry that has to be simulated and we must have an idea of the vertex of the parallelogram that will contain the first stages of the turbofan. In order to do that, the geometry has to be opened using either \textit{Salome} or \textit{Paraview}. Then the axes must be showed and write the points down on the \textit{blockMesh} file. This modification is presented below.
+
 \begin{footnotesize}
 \begin{verbatim}
 vertices
@@ -20,12 +24,12 @@ vertices
 \end{verbatim}
 \end{footnotesize}
 
+\paragraph{}It can be clearly seen that the domain of the mesh is a $0.58$x$2.3$x$2.3m$ rectangular prism.
 
-\paragraph{}Once the boundaries of the \textit{blockMesh} are defined, the number of cells that it will have has to be set. It has to be taken into account that a very dense mesh will not be efficient when simulating the case. On the other hand, a very coarse mesh will not be efficient either because additional divisions will have to be set when generating the refined mesh with \textit{snappyHexMesh}. Thus, a compromise solution between a mesh with a very high number of cells and a very low number of cells has to be attained.
+\paragraph{}Once the boundaries of the \textit{blockMesh} are defined, the number of cells that it will have has to be set. It has to be taken into account that a very dense mesh will not be efficient when simulating the case given that we will use the \textit{snappyHexMesh} later and it will be over densified. On the other hand, a very coarse mesh will not be efficient either because additional divisions will have to be set when generating the refined mesh and the computational time might grow. Thus, a solution between a mesh with a very high number of cells and a very low number of cells has to be attained.
 
-\paragraph{}This basic mesh has been divided every $0.05m$. It means that we have done 12 divisions in the x direction, 46 on the y direction and 46 more on the z direction. Obviously, the vertex numeration has been kept the same as the one that comes as default in every tutorial case; so, it was easier to define the inlet face of the \textit{blockMesh} as well as the outlet face that will be used to define the boundary conditions.
+\paragraph{}This basic mesh has been divided every $0.05m$. It means that we have done 12 divisions in the x direction, 46 on the y direction and 46 more on the z direction. 
 
-\paragraph{}The dense of the mesh is as follows:\\
 \begin{footnotesize}
 \begin{verbatim}
 blocks
@@ -35,7 +39,8 @@ blocks
 \end{verbatim}
 \end{footnotesize}
 
-\paragraph{}Finally, the differents faces of the mesh must be define depending on if they are the inlet and outlet faces or the lateral faces.To do this, the vertices are numbered according to their appearance in the \textit{blockMeshDict} and the faces are defined by those numbers. In our case, the faces are as follows:\\
+\paragraph{}Finally, the differents faces of the mesh must be define depending on if they are the inlet and outlet faces or the lateral faces.To do this, the vertices are numbered according to their appearance in the \textit{blockMeshDict} and the faces are defined by those numbers. Since, the vertex numeration has been kept the same as the one that comes as default in every tutorial case; it is easier to define the inlet face of the \textit{blockMesh} as well as the outlet face that will be used to define the boundary conditions.
+
 \begin{footnotesize}
 \begin{verbatim}
 boundary
@@ -70,6 +75,8 @@ boundary
 );
 \end{verbatim}
 \end{footnotesize}
+
+\paragraph{}The \textit{blockMesh} file is presented below. This is the final file that has been used to generate the \textit{blockMesh} and it is included in the \textit{.zip} file attached to this report. Only the parameters mentioned above have been modified; the rest is equal to the tutorial case that has been selected.
 
 \begin{footnotesize}
 \begin{verbatim}
@@ -150,7 +157,7 @@ boundary
 \end{verbatim}
 \end{footnotesize}
 
-\paragraph{}The log obtained when the mesh has been generated is as follows:
+\paragraph{}The log obtained when the \textit{blocMesh} has been generated is presented below. As it can be seen, no errors were found during the computation of this basic mesh. We can see that the number of cells is relatively high (\textbf{POSAR N. CELLS}) but perfectly suitable to proceed with the refinement of the mesh. Additionally, a caption of the basic mesh is presented in \ref{blockMeshcaption}.
 
 \texttt{\\*
 Writing polyMesh\\*
@@ -175,63 +182,246 @@ Patches\\*
 \begin{figure}[h!]
 \includegraphics[scale=0.26]{./mesh/screenshots/blockmesh}
 \centering
-\caption{blockMesh}
+\caption{blockMeshcaption}
+\label{blockMeshcaption}
 \end{figure}
-
 
 \subsubsection{Mesh refinement}
 
-\paragraph{}To refine the mesh, the \textit{snappyHexMesh} utility, included in OpenFoam, which is used and several parameters have to be modified in order to obtain a dense mesh that is suitable for the simulation of this complex geometry. Additionally, it has to be considered that a particular geometry is has a relative velocity; this is, the rotor is rotating, and so the first and second stages of the Low Pressure Compressor of the turbofan engine, while the nacelle and the combustor are static. 
+\paragraph{}To refine the mesh, the \textit{snappyHexMesh} utility is used (included in \textit{OpenFOAM}) and several parameters have to be modified in order to obtain a dense mesh that is suitable for the simulation of this complex geometry. It has to be considered that a particular geometry is has a relative velocity as well; this is, the rotor is rotating, and so the first and second stages of the Low Pressure Compression of the turbofan engine, while the nacelle and the combustor are static. 
 
-\paragraph{}\textbf{FALTA EXPLICAR SURFACE EXTRACT}
+\paragraph{}In the \textit{snappyHexMeshDict} several parameters have to be modified. First, the \textit{snappyHexMesh} must be aware of the geometries that it has to take into account. As it can be seen below, the files \textit{Fan.stl}, \textit{HPSpool.stl}, \textit{LPSpool.stl} and \textit{NacelleStator.stl} have been included here.
 
-\paragraph{}A comparison between the coarse mesh and the refined mesh generated is presented below.
+\begin{footnotesize}
+\begin{verbatim}
+geometry
+{
+    box1x1x1
+    {
+        type searchableBox;
+        min (1.5 1 -0.5);
+        max (3.5 2 0.5);
+    }
 
-\subsubsubsection{Coarse mesh}
-\paragraph{}The number of control volumes in the mesh is 40.
+    Fan.stl
+    {
+        type triSurfaceMesh;
+        regions
+        {
+        }
+    }
+    HPSpool.stl
+    {
+        type triSurfaceMesh;
+        regions
+        {
+        }
+    }
+    LPSpool.stl
+    {
+        type triSurfaceMesh;
+        regions
+        {
+        }
+    }
+    NacelleStator.stl
+    {
+        type triSurfaceMesh;
+        regions
+        {
+        }
+    }
+};
+\end{verbatim}
+\end{footnotesize}
 
-\begin{figure}[h!]
-\includegraphics[scale=0.26]{./mesh/screenshots/coarse2}
-\centering
-\caption{Detail of the coarse mesh}
-\end{figure}
+\paragraph{}Next, the number of control volumes has to be limited to ensure that the laptop is capable of running a simulation. This number has been limited to two million cells, which is a pretty high number and the following lines have to be modified.
 
-\begin{figure}[h!]
-\includegraphics[scale=0.26]{./mesh/screenshots/coarse3}
-\centering
-\caption{Detail of the coarse mesh}
-\end{figure}
+\begin{footnotesize}
+\begin{verbatim}
+    // Overall cell limit (approximately). Refinement will stop immediately
+    // upon reaching this number so a refinement level might not complete.
+    // Note that this is the number of cells before removing the part which
+    // is not 'visible' from the keepPoint. The final number of cells might
+    // actually be a lot less.
+    maxGlobalCells 2000000;
+\end{verbatim}
+\end{footnotesize}
 
-\subsubsubsection{Standard mesh}
+\paragraph{}The next step is to define the refinement required of the mesh for the different geometries that will be simulated. It can be clearly seen in this section that we have included the same \textit{STL} files that we did before. The higher the level of the refinement, the denser the mesh will be and the better it will resemble to the real geometry. But the limitation here is the computational power so, the maximum refinement number cannot be as high as we would like to. Thus, depending on the complexity of the geometry, several minimum (the first number) and maximum (the second number) refinement leves have been defined.
 
-\begin{figure}[h!]
-\includegraphics[scale=0.26]{./mesh/screenshots/std2}
-\centering
-\caption{Detail of the standard mesh}
-\end{figure}
+\begin{footnotesize}
+\begin{verbatim}
+    // Surface based refinement
+    // ~~~~~~~~~~~~~~~~~~~~~~~~
 
-\begin{figure}[h!]
-\includegraphics[scale=0.26]{./mesh/screenshots/std3}
-\centering
-\caption{Detail of the standard mesh}
-\end{figure}
+    // Specifies two levels for every surface. The first is the minimum level,
+    // every cell intersecting a surface gets refined up to the minimum level.
+    // The second level is the maximum level. Cells that 'see' multiple
+    // intersections where the intersections make an
+    // angle > resolveFeatureAngle get refined up to the maximum level.
 
-\subsubsection{Dense mesh}
+    refinementSurfaces
+    {
+        Fan.stl
+        {
+            // Surface-wise min and max refinement level
+            level (3 5);
 
-\begin{figure}[h!]
-\includegraphics[scale=0.26]{./mesh/screenshots/Xtreme1}
-\centering
-\caption{Detail of the coarse mesh}
-\end{figure}
+            // Optional region-wise level specification
+            regions
+            {
+            }
+            patchInfo
+            {
+                type patch;
+                inGroups (meshedPatches);
+            }
+	}
+        HPSpool.stl
+        {
+            // Surface-wise min and max refinement level
+            level (3 5);
 
-\begin{figure}[h!]
-\includegraphics[scale=0.26]{./mesh/screenshots/Xtreme3}
-\centering
-\caption{Detail of the dense mesh}
-\end{figure}
+            // Optional region-wise level specification
+            regions
+            {
+            }
+            patchInfo
+            {
+                type patch;
+                inGroups (meshedPatches);
+            }
+	}
+        LPSpool.stl
+        {
+            // Surface-wise min and max refinement level
+            level (6 8);
+	    cellZone rotor; cellZoneInside inside;
 
-\begin{figure}[h!]
-\includegraphics[scale=0.26]{./mesh/screenshots/Xtreme5}
-\centering
-\caption{Detail of the dense mesh}
-\end{figure}
+            // Optional region-wise level specification
+            regions
+            {
+            }
+            patchInfo
+            {
+                type patch;
+                inGroups (meshedPatches);
+            }
+	}
+        NacelleStator.stl
+        {
+            // Surface-wise min and max refinement level
+            level (4 6);
+
+            // Optional region-wise level specification
+            regions
+            {
+            }
+            patchInfo
+            {
+                type patch;
+                inGroups (meshedPatches);
+            }
+	}
+    }
+\end{verbatim}
+\end{footnotesize}
+
+\paragraph{}The next step is to select a point within the mesh. So, the \textit{locationInMesh} has to be modified with the x, y, and z-coordinates of a point with that feature.
+
+\begin{footnotesize}
+\begin{verbatim}
+    // After refinement patches get added for all refinementSurfaces and
+    // all cells intersecting the surfaces get put into these patches. The
+    // section reachable from the locationInMesh is kept.
+    // NOTE: This point should never be on a face, always inside a cell, even
+    // after refinement.
+    locationInMesh (.97443222 1.40534444343 1.24221211);
+\end{verbatim}
+\end{footnotesize}
+
+\paragraph{}Finally, the \textit{surfaceFeatureExtract} has been used.  What this option does it to refine even more the mesh near the points that have complex geometries such as the edges of the blades. This is particularly useful for the turbofan given that it has a high number of blades and a twisting geometry that will resemble more to the reality when using this option. Thus, the following lines within the \textit{snappyHexMeshDict} must be modified.
+
+\begin{footnotesize}
+\begin{verbatim}
+   // Explicit feature edge refinement
+    // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    // Specifies a level for any cell intersected by explicitly provided
+    // edges.
+    // This is a featureEdgeMesh, read from constant/triSurface for now.
+    // Specify 'levels' in the same way as the 'distance' mode in the
+    // refinementRegions (see below). The old specification
+    //      level   2;
+    // is equivalent to
+    //      levels  ((0 2));
+
+    features
+    (
+        {
+           file "NacelleStator.eMesh";
+           level 5;
+        //    levels ((0.0 2) (1.0 3));
+        }
+        {
+           file "LPSpool.eMesh";
+           level 7;
+        //    levels ((0.0 2) (1.0 3));
+        }
+    );
+\end{verbatim}
+\end{footnotesize}
+
+\paragraph{}All of the other parameters of the \textit{snappyHexMeshDict} have not been modified.
+
+%\paragraph{}A comparison between the coarse mesh and the refined mesh generated is presented below.
+
+%\subsubsubsection{Coarse mesh}
+%\paragraph{}The number of control volumes in the mesh is 40.
+
+%\begin{figure}[h!]
+%\includegraphics[scale=0.26]{./mesh/screenshots/coarse2}
+%\centering
+%\caption{Detail of the coarse mesh}
+%\end{figure}
+
+%\begin{figure}[h!]
+%\includegraphics[scale=0.26]{./mesh/screenshots/coarse3}
+%\centering
+%\caption{Detail of the coarse mesh}
+%\end{figure}
+
+%\subsubsubsection{Standard mesh}
+
+%\begin{figure}[h!]
+%\includegraphics[scale=0.26]{./mesh/screenshots/std2}
+%\centering
+%\caption{Detail of the standard mesh}
+%\end{figure}
+
+%\begin{figure}[h!]
+%\includegraphics[scale=0.26]{./mesh/screenshots/std3}
+%\centering
+%\caption{Detail of the standard mesh}
+%\end{figure}
+
+%\subsubsubsection{Dense mesh}
+
+%\begin{figure}[h!]
+%\includegraphics[scale=0.26]{./mesh/screenshots/Xtreme1}
+%\centering
+%\caption{Detail of the coarse mesh}
+%\end{figure}
+
+%\begin{figure}[h!]
+%\includegraphics[scale=0.26]{./mesh/screenshots/Xtreme3}
+%\centering
+%\caption{Detail of the dense mesh}
+%\end{figure}
+
+%\begin{figure}[h!]
+%\includegraphics[scale=0.26]{./mesh/screenshots/Xtreme5}
+%\centering
+%\caption{Detail of the dense mesh}
+%\end{figure}
