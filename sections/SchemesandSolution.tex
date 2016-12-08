@@ -1,13 +1,6 @@
 \subsection{fvSchemes and fvSolution}
 \paragraph{}
-The fvSchemes dictionary contains the numerical schemes that they are used in the simulation and the fvSolution contains the resolution methods and the tolerances for each equation.
-
-\paragraph{}
-In the hypotheses section we have considered that the flow is stationary. To impose this condition we must modify the \textbf{system/fvSchemes} file, the section of In \textit{ ddtSchemes}, which is the temporal integration scheme. We must write steadyState. The fvSolution dictionary has not been modified.
-
-\paragraph{}
-The
-
+The fvSchemes dictionary contains the numerical schemes that they are used in the simulation. In the hypotheses section we have considered that the flow is stationary. To impose this condition we must modify the \textbf{system/fvSchemes} file, the section of \textit{ ddtSchemes}, which is the temporal integration scheme. We must write steadyState. Finally, the file that has been used to run the simulation is presented below.
 
 \begin{footnotesize}
 \begin{verbatim}
@@ -72,6 +65,11 @@ wallDist
 
 \end{verbatim}
 \end{footnotesize}
+
+
+\paragraph{}
+The fvSolution contains the resolution methods and the tolerances for each equation, but in our case it has not been modified. So, the file fvSolution for the current case is the following:
+
 
 \begin{footnotesize}
 \begin{verbatim}
