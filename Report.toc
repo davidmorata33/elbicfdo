@@ -31,20 +31,29 @@
 \contentsline {paragraph}{}{15}{section*.25}
 \contentsline {paragraph}{}{16}{section*.26}
 \contentsline {paragraph}{}{16}{section*.27}
-\contentsline {subsection}{\numberline {3.2}Boundary conditions}{17}{subsection.3.2}
 \contentsline {paragraph}{}{17}{section*.28}
+\contentsline {subsubsection}{\numberline {3.1.4}Comparison of different types of mesh}{17}{subsubsection.3.1.4}
 \contentsline {paragraph}{}{17}{section*.29}
+\contentsline {subsubsubsection}{\numberline {3.1.4.1}Coarse mesh}{18}{subsubsubsection.3.1.4.1}
 \contentsline {paragraph}{}{18}{section*.30}
-\contentsline {subsection}{\numberline {3.3}Properties}{19}{subsection.3.3}
-\contentsline {paragraph}{}{19}{section*.31}
-\contentsline {paragraph}{}{19}{section*.32}
-\contentsline {paragraph}{}{20}{section*.33}
-\contentsline {paragraph}{}{20}{section*.34}
-\contentsline {subsection}{\numberline {3.4}Rotation}{21}{subsection.3.4}
-\contentsline {paragraph}{}{21}{section*.35}
-\contentsline {paragraph}{}{21}{section*.36}
-\contentsline {subsection}{\numberline {3.5}Control}{22}{subsection.3.5}
-\contentsline {paragraph}{}{22}{section*.37}
-\contentsline {paragraph}{}{22}{section*.38}
-\contentsline {section}{\numberline {4}The problem}{25}{section.4}
-\contentsline {section}{\numberline {5}Simulation}{26}{section.5}
+\contentsline {subsubsubsection}{\numberline {3.1.4.2}Standard mesh}{19}{subsubsubsection.3.1.4.2}
+\contentsline {paragraph}{}{19}{section*.33}
+\contentsline {subsubsubsection}{\numberline {3.1.4.3}Dense mesh}{20}{subsubsubsection.3.1.4.3}
+\contentsline {paragraph}{}{20}{section*.36}
+\contentsline {subsection}{\numberline {3.2}Boundary conditions}{21}{subsection.3.2}
+\contentsline {paragraph}{}{21}{section*.39}
+\contentsline {paragraph}{}{21}{section*.40}
+\contentsline {paragraph}{}{22}{section*.41}
+\contentsline {subsection}{\numberline {3.3}Properties}{24}{subsection.3.3}
+\contentsline {paragraph}{}{24}{section*.42}
+\contentsline {paragraph}{}{24}{section*.43}
+\contentsline {paragraph}{}{24}{section*.44}
+\contentsline {paragraph}{}{24}{section*.45}
+\contentsline {subsection}{\numberline {3.4}Rotation}{26}{subsection.3.4}
+\contentsline {paragraph}{}{26}{section*.46}
+\contentsline {paragraph}{}{26}{section*.47}
+\contentsline {subsection}{\numberline {3.5}Control}{28}{subsection.3.5}
+\contentsline {paragraph}{}{28}{section*.48}
+\contentsline {paragraph}{}{28}{section*.49}
+\contentsline {section}{\numberline {4}Simulation of the turbofan}{30}{section.4}
+\contentsline {section}{\numberline {5}Post-process}{31}{section.5}

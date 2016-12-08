@@ -39,7 +39,7 @@ blocks
 \end{verbatim}
 \end{footnotesize}
 
-\paragraph{}Finally, the differents faces of the mesh must be define depending on if they are the inlet and outlet faces or the lateral faces.To do this, the vertices are numbered according to their appearance in the \textit{blockMeshDict} and the faces are defined by those numbers. Since, the vertex numeration has been kept the same as the one that comes as default in every tutorial case; it is easier to define the inlet face of the \textit{blockMesh} as well as the outlet face that will be used to define the boundary conditions.
+\paragraph{}Finally, the differents faces of the mesh must be defined depending on if they are the inlet and outlet faces or the lateral faces.To do this, the vertices are numbered according to their appearance in the \textit{blockMeshDict} and the faces are defined by those numbers. Since, the vertex numeration has been kept the same as the one that comes as default in every tutorial case; it is easier to define the inlet face of the \textit{blockMesh} as well as the outlet face that will be used to define the boundary conditions.
 
 \begin{footnotesize}
 \begin{verbatim}
@@ -157,7 +157,7 @@ boundary
 \end{verbatim}
 \end{footnotesize}
 
-\paragraph{}The log obtained when the \textit{blocMesh} has been generated is presented below. As it can be seen, no errors were found during the computation of this basic mesh. We can see that the number of cells is relatively high (\textbf{POSAR N. CELLS}) but perfectly suitable to proceed with the refinement of the mesh. Additionally, a caption of the basic mesh is presented in \ref{blockMeshcaption}.
+\paragraph{}The log obtained when the \textit{blockMesh} has been generated is presented below. As it can be seen, no errors were found during the computation of this basic mesh. We can see that the number of cells is relatively high (\textbf{POSAR N. CELLS}) but perfectly suitable to proceed with the refinement of the mesh. Additionally, a caption of the basic mesh is presented in \ref{blockMeshcaption}.
 
 \texttt{\\*
 Writing polyMesh\\*
@@ -328,6 +328,20 @@ geometry
 \end{verbatim}
 \end{footnotesize}
 
+\paragraph{}It is worth mentioning that a zone has been defined within  the \textit{LPSpool.stl} of the surface refinement from above. The MFR options must have a particular set of cellzones defined that will rotate. So, in order to make these first stages of the compressor to rotate, this has to be defined.
+
+\begin{footnotesize}
+\begin{verbatim}
+        LPSpool.stl
+        {
+            // Surface-wise min and max refinement level
+            level (6 8);
+	    cellZone rotor; cellZoneInside inside;
+		[...] %MODIFIED ^
+\end{verbatim}
+\end{footnotesize}
+
+
 \paragraph{}The next step is to select a point within the mesh. So, the \textit{locationInMesh} has to be modified with the x, y, and z-coordinates of a point with that feature.
 
 \begin{footnotesize}
@@ -375,53 +389,69 @@ geometry
 
 \paragraph{}All of the other parameters of the \textit{snappyHexMeshDict} have not been modified.
 
-%\paragraph{}A comparison between the coarse mesh and the refined mesh generated is presented below.
+\subsubsection{Comparison of different types of mesh}
 
-%\subsubsubsection{Coarse mesh}
-%\paragraph{}The number of control volumes in the mesh is 40.
 
-%\begin{figure}[h!]
-%\includegraphics[scale=0.26]{./mesh/screenshots/coarse2}
-%\centering
-%\caption{Detail of the coarse mesh}
-%\end{figure}
+\paragraph{}A comparison between the coarse mesh and the refined mesh generated is presented below. The mesh that has been used to simulate the case is the refined mesh (for obvious reasons). Also, it has to be kept in mind that the coarser the mesh, the worse that the geometry will be (this is, it will not resemble to the real geometry), as can be seen below.
 
-%\begin{figure}[h!]
-%\includegraphics[scale=0.26]{./mesh/screenshots/coarse3}
-%\centering
-%\caption{Detail of the coarse mesh}
-%\end{figure}
+\newpage\subsubsubsection{Coarse mesh}
 
-%\subsubsubsection{Standard mesh}
+\paragraph{}The number of control volumes in the mesh is 40, which is a very small number given the size of the turbofan. It can be seen in \ref{coarse1} and \ref{coarse2} that this mesh cannot be used to run a simulation.
 
-%\begin{figure}[h!]
-%\includegraphics[scale=0.26]{./mesh/screenshots/std2}
-%\centering
-%\caption{Detail of the standard mesh}
-%\end{figure}
+\begin{figure}[h!]
+\includegraphics[scale=0.24]{./mesh/screenshots/coarse2}
+\centering
+\caption{Detail of the coarse mesh}
+\label{coarse1}
+\end{figure}
 
-%\begin{figure}[h!]
-%\includegraphics[scale=0.26]{./mesh/screenshots/std3}
-%\centering
-%\caption{Detail of the standard mesh}
-%\end{figure}
+\begin{figure}[h!]
+\includegraphics[scale=0.24]{./mesh/screenshots/coarse3}
+\centering
+\caption{Detail of the coarse mesh}
+\label{coarse2}
+\end{figure}
 
-%\subsubsubsection{Dense mesh}
+\newpage\subsubsubsection{Standard mesh}
+
+\paragraph{}Next, it is presented the standard mesh. It has a higher number of cells compared to the coarse mesh, but it cannot be used either given that the size of the turbine is pretty big. The figures \ref{standard1} and \ref{standard2} are a proof of that.
+
+\begin{figure}[h!]
+\includegraphics[scale=0.24]{./mesh/screenshots/std2}
+\centering
+\caption{Detail of the standard mesh}
+\label{standard1}
+\end{figure}
+
+\begin{figure}[h!]
+\includegraphics[scale=0.24]{./mesh/screenshots/std3}
+\centering
+\caption{Detail of the standard mesh}
+\label{standard2}
+\end{figure}
+
+\newpage\subsubsubsection{Dense mesh}
+
+\paragraph{}Finally, the dense mesh is presented. This is by far the best mesh that has been generated for the case. It can be clearly seen on \ref{dense2} and \ref{dense3}  that it can be suitable to run the simulation of the first stages of this turbofan.
+
 
 %\begin{figure}[h!]
 %\includegraphics[scale=0.26]{./mesh/screenshots/Xtreme1}
 %\centering
-%\caption{Detail of the coarse mesh}
+%\caption{Detail of the dense mesh}
+%\label{dense1}
 %\end{figure}
 
-%\begin{figure}[h!]
-%\includegraphics[scale=0.26]{./mesh/screenshots/Xtreme3}
-%\centering
-%\caption{Detail of the dense mesh}
-%\end{figure}
+\begin{figure}[h!]
+\includegraphics[scale=0.24]{./mesh/screenshots/Xtreme3}
+\centering
+\caption{Detail of the dense mesh}
+\label{dense2}
+\end{figure}
 
-%\begin{figure}[h!]
-%\includegraphics[scale=0.26]{./mesh/screenshots/Xtreme5}
-%\centering
-%\caption{Detail of the dense mesh}
-%\end{figure}
+\begin{figure}[h!]
+\includegraphics[scale=0.24]{./mesh/screenshots/Xtreme5}
+\centering
+\caption{Detail of the dense mesh}
+\label{dense3}
+\end{figure}
