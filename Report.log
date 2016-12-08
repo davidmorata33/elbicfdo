@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.9.26)  9 DEC 2016 00:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.9.26)  9 DEC 2016 00:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2402,17 +2402,13 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 49.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 49.
 Package rerunfilecheck Info: File `Report.out' has not changed.
 (rerunfilecheck)             Checksum: 3FBB803AE9C1B6038005AD9B108E1272;4464.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 49.
  ) 
 Here is how much of TeX's memory you used:
- 28500 strings out of 493014
- 537412 string characters out of 6133351
- 602912 words of memory out of 5000000
- 31453 multiletter control sequences out of 15000+600000
+ 28502 strings out of 493014
+ 537435 string characters out of 6133351
+ 602943 words of memory out of 5000000
+ 31454 multiletter control sequences out of 15000+600000
  51966 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,7n,77p,10480b,901s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2429,10 +2425,10 @@ dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2016/texmf-dist/fonts
 /type1/public/lm/lmsy8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/publ
 ic/lm/lmtt10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmtt
 12.pfb>
-Output written on Report.pdf (41 pages, 1639712 bytes).
+Output written on Report.pdf (41 pages, 1640053 bytes).
 PDF statistics:
- 637 PDF objects out of 1000 (max. 8388607)
- 565 compressed objects within 6 object streams
- 134 named destinations out of 1000 (max. 500000)
+ 638 PDF objects out of 1000 (max. 8388607)
+ 566 compressed objects within 6 object streams
+ 135 named destinations out of 1000 (max. 500000)
  688 words of extra memory for PDF output out of 10000 (max. 10000000)
 
