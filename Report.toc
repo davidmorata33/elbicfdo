@@ -54,18 +54,20 @@
 \contentsline {paragraph}{}{25}{section*.48}
 \contentsline {paragraph}{}{25}{section*.49}
 \contentsline {paragraph}{}{26}{section*.50}
-\contentsline {subsection}{\numberline {3.4}Properties}{28}{subsection.3.4}
+\contentsline {subsection}{\numberline {3.4}Properties of the flow}{28}{subsection.3.4}
 \contentsline {paragraph}{}{28}{section*.51}
 \contentsline {paragraph}{}{28}{section*.52}
 \contentsline {paragraph}{}{28}{section*.53}
 \contentsline {paragraph}{}{29}{section*.54}
-\contentsline {subsection}{\numberline {3.5}Control}{30}{subsection.3.5}
+\contentsline {subsection}{\numberline {3.5}ControlDict}{30}{subsection.3.5}
 \contentsline {paragraph}{}{30}{section*.55}
 \contentsline {paragraph}{}{30}{section*.56}
-\contentsline {subsection}{\numberline {3.6}fvSchemes and fvSolution}{32}{subsection.3.6}
-\contentsline {paragraph}{}{32}{section*.57}
-\contentsline {paragraph}{}{32}{section*.58}
-\contentsline {paragraph}{}{32}{section*.59}
-\contentsline {subsection}{\numberline {3.7} Running the application}{36}{subsection.3.7}
-\contentsline {section}{\numberline {4}Simulation of the turbofan}{37}{section.4}
-\contentsline {section}{\numberline {5}Post-process}{38}{section.5}
+\contentsline {paragraph}{}{30}{section*.57}
+\contentsline {paragraph}{}{31}{section*.58}
+\contentsline {subsection}{\numberline {3.6}fvSchemes and fvSolution}{33}{subsection.3.6}
+\contentsline {paragraph}{}{33}{section*.59}
+\contentsline {paragraph}{}{33}{section*.60}
+\contentsline {paragraph}{}{33}{section*.61}
+\contentsline {subsection}{\numberline {3.7} Running the application}{37}{subsection.3.7}
+\contentsline {section}{\numberline {4}Simulation of the turbofan}{38}{section.4}
+\contentsline {section}{\numberline {5}Post-process}{39}{section.5}
