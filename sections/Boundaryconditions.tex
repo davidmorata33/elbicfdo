@@ -1,13 +1,61 @@
 \subsection{Boundary conditions}
-\paragraph{}
-The known initial values of the the pressure and the velocity have to be defined in the program to carry out the simulation.
 
-\paragraph{}
-We consider that the velocity at the output of the mesh, in the direction $X$, is $30 m/s$. To change this parameter, we have to modify the file \textbf{0.orig/U}.
-
+\paragraph{}Some initial conditions and values have to be defined in order to run the simulation. The initial velocity field and pressure are especially important since these inputs are the starting values of the simulation. So, it is clear that the values at the \textit{inlet}, which was defined within the previous sections, have to be defined. Additionally, the values at the \textit{outlet} of the geometry have to be defined as well, but the can be, unlike the \textit{inlet}, not fixed values. Thus, the following modifications have to be made in the  \textit{0.orig/U}.
 
 \begin{footnotesize}
+\begin{verbatim}
+internalField   uniform (0 0 0);
 
+boundaryField
+{
+	[...]
+	    inlet
+    {
+        type            fixedValue;
+	value		uniform (30 0 0);
+    }
+
+    outlet
+    {
+        type            zeroGradient;
+    }
+}
+[...]
+\end{verbatim}
+\end{footnotesize}
+	
+\paragraph{}These conditions for the pressure have to be modified as well in the \textit{0.orig/p} file.
+
+\begin{footnotesize}
+\begin{verbatim}
+internalField   uniform 0;
+
+boundaryField
+{
+	[...]
+    inlet
+    {
+        type            fixedValue;
+	    value		    uniform 0;
+    }
+
+    outlet
+    {
+        type            zeroGradient;
+    }
+}
+[...]
+\end{verbatim}
+\end{footnotesize}
+
+
+\paragraph{}Given that we have more solids that will be simulated (the Nacelle and the rotor), their conditions for the velocity and the pressure have to be defined as well. Since we have a newtonian flow, the condition for the velocity in these solids will be  the \textit{noSlip} condition. For the pressure, the condition will be the \textit{zeroGradient} condition.
+
+\paragraph{}Finally, both files are presented below. These are the files that have been used to run the simulation for this case.
+
+\paragraph{}\textbf{Velocity}
+
+\begin{footnotesize}
 \begin{verbatim}
 /*--------------------------------*- C++ -*----------------------------------*\
 | =========                 |                                                 |
@@ -56,14 +104,11 @@ boundaryField
 // ************************************************************************* //
 
 \end{verbatim}
-
 \end{footnotesize}
 
-\paragraph{}
-Another consideration is that the pressure at the inlet of the mesh is  XXXX. To change this parameter, we have to modify the file \textbf{0.orig/p}.
+\paragraph{}\textbf{Pressure}
 
 \begin{footnotesize}
-
 \begin{verbatim}
 /*--------------------------------*- C++ -*----------------------------------*\
 | =========                 |                                                 |
@@ -112,5 +157,4 @@ boundaryField
 // ************************************************************************* //
 
 \end{verbatim}
-
 \end{footnotesize}
