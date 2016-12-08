@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.9.26)  8 DEC 2016 18:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.9.26)  8 DEC 2016 19:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2075,124 +2075,124 @@ Overfull \hbox (24.7488pt too wide) in paragraph at lines 157--157
 ) [27] (./sections/Transportproperties.tex
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 3.
+(hyperref)                than one, level fixed on input line 2.
 
 
-Underfull \hbox (badness 5893) in paragraph at lines 6--7
- [][][] \T1/lmr/m/n/12 To change all these pa-ram-e-ters, we have to mod-ify th
-e file
+Underfull \hbox (badness 10000) in paragraph at lines 4--5
+ [][][] \T1/lmr/m/n/12 To change all these flow pa-ram-e-ters and prop-er-ties,
+ the
  []
 
 
-Overfull \hbox (24.7488pt too wide) in paragraph at lines 11--11
+Overfull \hbox (24.7488pt too wide) in paragraph at lines 8--8
 []\T1/lmtt/m/n/10 /*--------------------------------*- C++ -*------------------
 ----------------*\[] 
  []
 
 
-Overfull \hbox (24.7488pt too wide) in paragraph at lines 12--12
+Overfull \hbox (24.7488pt too wide) in paragraph at lines 9--9
 []\T1/lmtt/m/n/10 | =========                 |                                
+                 |[] 
+ []
+
+
+Overfull \hbox (24.7488pt too wide) in paragraph at lines 10--10
+[]\T1/lmtt/m/n/10 | \\      /  F ield         | OpenFOAM: The Open Source CFD T
+oolbox           |[] 
+ []
+
+
+Overfull \hbox (24.7488pt too wide) in paragraph at lines 11--11
+[]\T1/lmtt/m/n/10 |  \\    /   O peration     | Version:  4.0                  
+                 |[] 
+ []
+
+
+Overfull \hbox (24.7488pt too wide) in paragraph at lines 12--12
+[]\T1/lmtt/m/n/10 |   \\  /    A nd           | Web:      www.OpenFOAM.org     
                  |[] 
  []
 
 
 Overfull \hbox (24.7488pt too wide) in paragraph at lines 13--13
-[]\T1/lmtt/m/n/10 | \\      /  F ield         | OpenFOAM: The Open Source CFD T
-oolbox           |[] 
- []
-
-
-Overfull \hbox (24.7488pt too wide) in paragraph at lines 14--14
-[]\T1/lmtt/m/n/10 |  \\    /   O peration     | Version:  4.0                  
-                 |[] 
- []
-
-
-Overfull \hbox (24.7488pt too wide) in paragraph at lines 15--15
-[]\T1/lmtt/m/n/10 |   \\  /    A nd           | Web:      www.OpenFOAM.org     
-                 |[] 
- []
-
-
-Overfull \hbox (24.7488pt too wide) in paragraph at lines 16--16
 []\T1/lmtt/m/n/10 |    \\/     M anipulation  |                                
                  |[] 
  []
 
 
-Overfull \hbox (24.7488pt too wide) in paragraph at lines 17--17
+Overfull \hbox (24.7488pt too wide) in paragraph at lines 14--14
 []\T1/lmtt/m/n/10 \*-----------------------------------------------------------
 ----------------*/[] 
  []
 
 
-Overfull \hbox (24.7488pt too wide) in paragraph at lines 25--25
+Overfull \hbox (24.7488pt too wide) in paragraph at lines 22--22
 []\T1/lmtt/m/n/10 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 * * * * * * * * //[] 
  []
 
 
-Overfull \hbox (24.7488pt too wide) in paragraph at lines 31--31
+Overfull \hbox (24.7488pt too wide) in paragraph at lines 28--28
 []\T1/lmtt/m/n/10 // **********************************************************
 *************** //[] 
  []
 
 
-Underfull \hbox (badness 5893) in paragraph at lines 39--40
- [][][] \T1/lmr/m/n/12 To change all these pa-ram-e-ters, we have to mod-ify th
-e file
+Underfull \hbox (badness 1221) in paragraph at lines 32--33
+ [][][] \T1/lmr/m/n/12 An-other hy-pothe-ses that has been made in or-der to al
+-le-vi-ate the
  []
 
 
-Overfull \hbox (24.7488pt too wide) in paragraph at lines 44--44
+Overfull \hbox (24.7488pt too wide) in paragraph at lines 37--37
 []\T1/lmtt/m/n/10 /*--------------------------------*- C++ -*------------------
 ----------------*\[] 
  []
 
 
-Overfull \hbox (24.7488pt too wide) in paragraph at lines 45--45
+Overfull \hbox (24.7488pt too wide) in paragraph at lines 38--38
 []\T1/lmtt/m/n/10 | =========                 |                                
                  |[] 
  []
 
-
-Overfull \hbox (24.7488pt too wide) in paragraph at lines 46--46
+[28]
+Overfull \hbox (24.7488pt too wide) in paragraph at lines 39--39
 []\T1/lmtt/m/n/10 | \\      /  F ield         | OpenFOAM: The Open Source CFD T
 oolbox           |[] 
  []
 
-[28]
-Overfull \hbox (24.7488pt too wide) in paragraph at lines 47--47
+
+Overfull \hbox (24.7488pt too wide) in paragraph at lines 40--40
 []\T1/lmtt/m/n/10 |  \\    /   O peration     | Version:  4.0                  
                  |[] 
  []
 
 
-Overfull \hbox (24.7488pt too wide) in paragraph at lines 48--48
+Overfull \hbox (24.7488pt too wide) in paragraph at lines 41--41
 []\T1/lmtt/m/n/10 |   \\  /    A nd           | Web:      www.OpenFOAM.org     
                  |[] 
  []
 
 
-Overfull \hbox (24.7488pt too wide) in paragraph at lines 49--49
+Overfull \hbox (24.7488pt too wide) in paragraph at lines 42--42
 []\T1/lmtt/m/n/10 |    \\/     M anipulation  |                                
                  |[] 
  []
 
 
-Overfull \hbox (24.7488pt too wide) in paragraph at lines 50--50
+Overfull \hbox (24.7488pt too wide) in paragraph at lines 43--43
 []\T1/lmtt/m/n/10 \*-----------------------------------------------------------
 ----------------*/[] 
  []
 
 
-Overfull \hbox (24.7488pt too wide) in paragraph at lines 58--58
+Overfull \hbox (24.7488pt too wide) in paragraph at lines 51--51
 []\T1/lmtt/m/n/10 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 * * * * * * * * //[] 
  []
 
 
-Overfull \hbox (24.7488pt too wide) in paragraph at lines 71--71
+Overfull \hbox (24.7488pt too wide) in paragraph at lines 64--64
 []\T1/lmtt/m/n/10 // **********************************************************
 *************** //[] 
  []
@@ -2413,7 +2413,7 @@ dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2016/texmf-dist/fonts
 /type1/public/lm/lmsy8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/publ
 ic/lm/lmtt10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmtt
 12.pfb>
-Output written on Report.pdf (39 pages, 1633259 bytes).
+Output written on Report.pdf (39 pages, 1633726 bytes).
 PDF statistics:
  587 PDF objects out of 1000 (max. 8388607)
  517 compressed objects within 6 object streams

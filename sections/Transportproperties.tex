@@ -1,10 +1,7 @@
 \subsection{Properties}
-\paragraph{}
-The properties of the flow have to be defined as explained in the hypothesis section. The \textit{transportModel} is Newtonian and the  kinematic viscosity \textit{nu} ($\nu$) is $1.5e^{-5} m^2/s$ .
+\paragraph{}The properties of the flow have to be defined taking into account the hypotheses made for the case. Given that the flow is air, the kinematic viscosity \textit{nu} ($\nu$) is $1.5e^{-5} m^2/s$. Also, as mentioned previously, the simulation will work with a Newtonian flow and this has to be defined here as well.
 
-\paragraph{}
-To change all these parameters, we have to modify the file \textbf{constant/transportProperties}.
-
+\paragraph{}To change all these flow parameters and properties, the \textit{constant/transportProperties} file has to be modified as follows. There is no need to dedicate more time to this file since everything is really clear within it.
 
 \begin{footnotesize}
 \begin{verbatim}
@@ -32,11 +29,7 @@ nu              [0 2 -1 0 0 0 0] 1.5e-05;
 \end{verbatim}
 \end{footnotesize}
 
-\paragraph{}
-Another hypothesis made have been that the flow of the simulation is laminar. To impose this hypothesis we have to write laminar in \textit{simulationType}.
-
-\paragraph{}
-To change all these parameters, we have to modify the file \textbf{constant/turbulenceProperties}.
+\paragraph{}Another hypotheses that has been made in order to alleviate the computation time is that the flow is laminar, although it would not be a very realistic flow in this case. To impose this condition, a modification has to be made in \textit{constant/turbulenceProperties} file.
 
 
 \begin{footnotesize}
@@ -72,3 +65,5 @@ RAS
 
 \end{verbatim}
 \end{footnotesize}
+
+\paragraph{}Since we are only interested in the topology of the flow of this file, the other parameters have not been modified.
