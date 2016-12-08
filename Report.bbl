@@ -1,0 +1,18 @@
+\begin{thebibliography}{1}
+
+\bibitem{Petit2011}
+Olivier Petit.
+\newblock {mesh generation . Different ways of creating the mesh . Outline}.
+\newblock 2011.
+
+\bibitem{Nozaki9240}
+Fumiya Nozaki.
+\newblock {CFD for Rotating Machinery}.
+\newblock (May), 9240.
+
+\bibitem{Pieri2014}
+Roberto Pieri.
+\newblock {A tool for pre-processing : snappyHexMesh}.
+\newblock (June), 2014.
+
+\end{thebibliography}

@@ -1,0 +1,52 @@
+This is BibTeX, Version 0.99d (TeX Live 2016)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: Report.aux
+The style file: unsrt.bst
+Database file #1: ./ref/bibliography.bib
+Warning--empty journal in Petit2011
+Warning--empty journal in Nozaki9240
+Warning--there's a number but no volume in Nozaki9240
+Warning--empty journal in Pieri2014
+Warning--there's a number but no volume in Pieri2014
+You've used 3 entries,
+            1791 wiz_defined-function locations,
+            460 strings with 3774 characters,
+and the built_in function-call counts, 426 in all, are:
+= -- 32
+> -- 12
+< -- 0
++ -- 6
+- -- 3
+* -- 21
+:= -- 80
+add.period$ -- 9
+call.type$ -- 3
+change.case$ -- 3
+chr.to.int$ -- 0
+cite$ -- 8
+duplicate$ -- 24
+empty$ -- 45
+format.name$ -- 3
+if$ -- 86
+int.to.chr$ -- 0
+int.to.str$ -- 3
+missing$ -- 3
+newline$ -- 18
+num.names$ -- 3
+pop$ -- 13
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 7
+stack$ -- 0
+substring$ -- 0
+swap$ -- 0
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 5
+while$ -- 3
+width$ -- 4
+write$ -- 31
+(There were 5 warnings)
