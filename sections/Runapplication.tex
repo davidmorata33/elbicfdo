@@ -1,1 +1,19 @@
-\subsection{	Running the application}
+\subsection{	Commands to run the simulation}
+
+\paragraph{}The first thing that must be done when the \textit{blockMesh} has been modified is to type the following lines in a terminal in the folder where the case is located. As it can be seen, it will save the log on a new file named blockMesh.log.
+
+\begin{center}
+\texttt{blockMesh >blockMesh.log}
+\end{center}
+
+\paragraph{}When the \textit{blockMesh} has been generated, the next thing to do is the refinement of the mesh. So, the \textit{snappyHexMesh} utility will be used, provided that all the parameters in \textit{snappyHexMeshDict} have been modified. In the terminal, the following command has to be typed:
+
+\begin{center}
+\texttt{foamJob decomposePar \\
+foamJob surfaceFeatureExtract \\
+foamJob -s -p snappyHexMesh -overwrite}
+\end{center}
+
+\paragraph{}The previous command has several features that will make the mesh refinement to run in parallel (notice the \textit{decomposePar} and the \textit{-p}). Additionally, a log will be created when running the last command that will contain all the information about the mesh refinement.
+
+\paragraph{}Next, the simulation can be run. To do that, the name of the solver as well as several other parameters have to be typed.
