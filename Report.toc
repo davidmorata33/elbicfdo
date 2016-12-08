@@ -55,5 +55,10 @@
 \contentsline {subsection}{\numberline {3.5}Control}{28}{subsection.3.5}
 \contentsline {paragraph}{}{28}{section*.48}
 \contentsline {paragraph}{}{28}{section*.49}
-\contentsline {section}{\numberline {4}Simulation of the turbofan}{30}{section.4}
-\contentsline {section}{\numberline {5}Post-process}{31}{section.5}
+\contentsline {subsection}{\numberline {3.6}fvSchemes and fvSolution}{30}{subsection.3.6}
+\contentsline {paragraph}{}{30}{section*.50}
+\contentsline {paragraph}{}{30}{section*.51}
+\contentsline {paragraph}{}{30}{section*.52}
+\contentsline {subsection}{\numberline {3.7} Running the application}{34}{subsection.3.7}
+\contentsline {section}{\numberline {4}Simulation of the turbofan}{35}{section.4}
+\contentsline {section}{\numberline {5}Post-process}{36}{section.5}
