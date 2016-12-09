@@ -1,9 +1,9 @@
 \section{Difficulties that we faced}
 
-\paragraph{}We have faced with several difficulties during the simulation of this case. First of all, our computers have not enough power to simulate this complicate case and some hypotheses have been taken to facilitate the simulationt. Furthermore, with the bootable in the USB we could not create a dense mesh and running the applicationd, therefore, we had to make a partition on the computer.
+\paragraph{}We have faced with several difficulties during the simulation of this case. First of all, our computers do not have enough processing power to simulate a complicated geometry and some hypotheses have been made in order to facilitate the simulation. Furthermore, with the bootable-USB we could not create a dense mesh and run the application; therefore, we had to make a partition on the computer.
 
-\paragraph{}In relation to the mesh, we had several problems because some of the downloaded GrabCAD files presented construction errors and some parts of the stage studied were \textit{disjointed}. To solve this problem, a modification of the files in solidworks was necessary.
+\paragraph{}In relation to the mesh, we had several problems because some of the downloaded \textit{GrabCAD} files presented construction errors and some parts of the low pressure compression stage studied were \textit{disjointed}. To solve this problem, a modification of the files in \textit{SolidWorks} was necessary. It has to be mentioned that this was a very tedious process since all these geometries had to be joined manually.
 
-\paragraph{}Another important aspect to highlight is that a turbofan is highly compressible but with the solvers used we suffered a lot of problems, which we unknowed, and they didn't allow us to get a correct simulation. In this situation, we decided to use a incompressible solver, \textit{pimpleDyMFoam}, in which we hadn't any error in the simulation.
+\paragraph{}Another important aspect to highlight is that the flow that goes through a turbofan is highly compressible but we have assumed that it was an incompressible flow. The solvers used to simulate compressible flow are really difficult to work with and we could not find a solution to deal with it. So, when we faced this situation, we decided that the best way to proceed with the case was to use an incompressible solver (\textit{pimpleDyMFoam}).
 
-\paragraph{}
+\paragraph{}The flow will not be very realistic with all the hypothesis made; however, it does show how the show behaves when it faces with the low pressure compression stage of a turbofan and the results, although not real, give a very good idea of what happens to the flow in terms of the velocity field.

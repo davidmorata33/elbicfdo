@@ -21,6 +21,12 @@ Eric Paterson.
 \newblock {PENN STATE The icoFoam “ Cavity Tutorial ”}.
 \newblock (April), 2010.
 
+\bibitem{Penttinen2011}
+Olle Penttinen.
+\newblock {A pimpleFoam tutorial for channel flow, with respect to different
+  LES models.}
+\newblock {\em Change}, pages 1--23, 2011.
+
 \bibitem{Petit2011}
 Olivier Petit.
 \newblock {Mesh generation: different ways of creating the mesh.}

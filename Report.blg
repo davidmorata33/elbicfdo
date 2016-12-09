@@ -14,45 +14,45 @@ Warning--empty journal in Petit2011
 Warning--empty journal in Pieri2014
 Warning--there's a number but no volume in Pieri2014
 Warning--there's a number but no volume in Rygg2013
-You've used 7 entries,
+You've used 8 entries,
             1791 wiz_defined-function locations,
-            481 strings with 4138 characters,
-and the built_in function-call counts, 1143 in all, are:
-= -- 96
-> -- 28
-< -- 1
-+ -- 14
-- -- 7
-* -- 59
-:= -- 191
-add.period$ -- 21
-call.type$ -- 7
-change.case$ -- 7
+            487 strings with 4269 characters,
+and the built_in function-call counts, 1389 in all, are:
+= -- 122
+> -- 32
+< -- 2
++ -- 16
+- -- 8
+* -- 70
+:= -- 226
+add.period$ -- 24
+call.type$ -- 8
+change.case$ -- 8
 chr.to.int$ -- 0
-cite$ -- 18
-duplicate$ -- 65
-empty$ -- 120
-format.name$ -- 7
-if$ -- 245
+cite$ -- 19
+duplicate$ -- 79
+empty$ -- 144
+format.name$ -- 8
+if$ -- 304
 int.to.chr$ -- 0
-int.to.str$ -- 7
-missing$ -- 7
-newline$ -- 38
-num.names$ -- 7
-pop$ -- 30
+int.to.str$ -- 8
+missing$ -- 8
+newline$ -- 43
+num.names$ -- 8
+pop$ -- 33
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 25
+skip$ -- 34
 stack$ -- 0
-substring$ -- 33
-swap$ -- 8
-text.length$ -- 1
+substring$ -- 52
+swap$ -- 14
+text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 11
-while$ -- 11
-width$ -- 8
-write$ -- 70
+while$ -- 15
+width$ -- 9
+write$ -- 81
 (There were 11 warnings)
