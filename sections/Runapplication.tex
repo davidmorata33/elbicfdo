@@ -1,6 +1,11 @@
 \subsection{Commands to run the simulation}
+\paragraph{}The first thing to perform the simulation is to copy the tutorial folder case into our current directory. To do so, open a terminal window and type the following command:
 
-\paragraph{}The first thing that must be done when the \textit{blockMesh} has been modified is to type the following lines in a terminal in the folder where the case is located. As it can be seen, it will save the log on a new file named blockMesh.log.
+\begin{center}
+\texttt{cp -r /opt/openfoam4/tutorials/incompressible/\\ pimpleDyMFoam/mixerVesselAMI2D/* .
+}
+\end{center}
+\paragraph{}Then we have to modify all the parameters explained during this report. The first thing that must be done when the \textit{blockMeshDict} has been modified is to type the following lines in a terminal. As it can be seen, it will save the log on a new file named blockMesh.log.
 
 \begin{center}
 \texttt{blockMesh >blockMesh.log}
@@ -10,11 +15,17 @@
 
 \begin{center}
 \texttt{foamJob decomposePar \\
-foamJob surfaceFeatureExtract \\
+foamJob -p surfaceFeatureExtract \\
 foamJob -s -p snappyHexMesh -overwrite}
 \end{center}
 
-\paragraph{}The previous command will make the mesh refinement to run in parallel (notice the \textit{decomposePar} and the \textit{-p}). Additionally, a log will be created when running the command that will contain all the information about the mesh refinement.
+\paragraph{}The previous command will make the mesh refinement to run in parallel (notice the \textit{decomposePar} and the \textit{-p}). Additionally, a log will be created when running the command that will contain all the information about the mesh refinement. The case can be runned without using parallel computing by typing:
+
+\begin{center}
+\texttt{surfaceFeatureExtract > surfaceFeatureExtract \\
+foamJob -s snappyHexMesh -overwrite\\
+mv log snappyHexMesh.log }
+\end{center}
 
 \paragraph{}In order to run the desired simulation, a patch with the AMI surface has to be made. Thus, the following command has to be typed. It will also create a \textit{log} file named \textit{createPatch.log}.
 
@@ -26,11 +37,11 @@ foamJob -s -p snappyHexMesh -overwrite}
 
 \begin{center}
 \texttt{cp -r 0.orig 0\\
-foamJob PimpleDyMFoam\\
+foamJob -s PimpleDyMFoam\\
 mv log PimpleDyMFoam.log}
 \end{center}
 
-\paragraph{}And finally, given that we were working in parallel, the case has to be reconstructed to show the results.
+\paragraph{}And finally, if we were working in parallel (in that case a -p must be added to the pimpleDyMFoam command as we did in the previous steps), the case has to be reconstructed to show the results.
 
 \begin{center}
 \texttt{reconstructParMesh -constant\\
