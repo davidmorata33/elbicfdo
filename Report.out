@@ -65,7 +65,7 @@
 \BOOKMARK [3][-]{section*.57}{}{subsection.3.5}% 65
 \BOOKMARK [4][-]{section*.58}{}{section*.57}% 66
 \BOOKMARK [4][-]{section*.59}{}{section*.57}% 67
-\BOOKMARK [2][-]{subsection.3.6}{ControlDict}{section.3}% 68
+\BOOKMARK [2][-]{subsection.3.6}{controlDict - parameters for the simulation}{section.3}% 68
 \BOOKMARK [3][-]{section*.60}{}{subsection.3.6}% 69
 \BOOKMARK [4][-]{section*.61}{}{section*.60}% 70
 \BOOKMARK [4][-]{section*.62}{}{section*.60}% 71
@@ -81,9 +81,13 @@
 \BOOKMARK [4][-]{section*.68}{}{section*.67}% 81
 \BOOKMARK [4][-]{section*.69}{}{section*.67}% 82
 \BOOKMARK [4][-]{section*.70}{}{section*.67}% 83
-\BOOKMARK [1][-]{section.5}{Post-process}{}% 84
-\BOOKMARK [2][-]{subsection.5.1}{Analysis of the results}{section.5}% 85
-\BOOKMARK [3][-]{section*.71}{}{subsection.5.1}% 86
-\BOOKMARK [2][-]{subsection.5.2}{Conclusions}{section.5}% 87
-\BOOKMARK [3][-]{section*.72}{}{subsection.5.2}% 88
-\BOOKMARK [1][-]{section.6}{References}{}% 89
+\BOOKMARK [4][-]{section*.71}{}{section*.67}% 84
+\BOOKMARK [4][-]{section*.72}{}{section*.67}% 85
+\BOOKMARK [4][-]{section*.73}{}{section*.67}% 86
+\BOOKMARK [4][-]{section*.74}{}{section*.67}% 87
+\BOOKMARK [1][-]{section.5}{Post-process}{}% 88
+\BOOKMARK [2][-]{subsection.5.1}{Analysis of the results}{section.5}% 89
+\BOOKMARK [3][-]{section*.75}{}{subsection.5.1}% 90
+\BOOKMARK [2][-]{subsection.5.2}{Conclusions}{section.5}% 91
+\BOOKMARK [3][-]{section*.76}{}{subsection.5.2}% 92
+\BOOKMARK [1][-]{section.6}{References}{}% 93

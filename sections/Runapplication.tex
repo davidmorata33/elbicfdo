@@ -14,6 +14,29 @@ foamJob surfaceFeatureExtract \\
 foamJob -s -p snappyHexMesh -overwrite}
 \end{center}
 
-\paragraph{}The previous command has several features that will make the mesh refinement to run in parallel (notice the \textit{decomposePar} and the \textit{-p}). Additionally, a log will be created when running the last command that will contain all the information about the mesh refinement.
+\paragraph{}The previous command will make the mesh refinement to run in parallel (notice the \textit{decomposePar} and the \textit{-p}). Additionally, a log will be created when running the command that will contain all the information about the mesh refinement.
 
-\paragraph{}Next, the simulation can be run. To do that, the name of the solver as well as several other parameters have to be typed.
+\paragraph{}In order to run the desired simulation, a patch with the AMI surface has to be made. Thus, the following command has to be typed. It will also create a \textit{log} file named \textit{createPatch.log}.
+
+\begin{center}
+\texttt{createPatch -overwrite > createPatch.log}
+\end{center}
+
+\paragraph{}Next, the simulation can be run.
+
+\begin{center}
+\texttt{cp -r 0.orig 0\\
+foamJob PimpleDyMFoam\\
+mv log PimpleDyMFoam.log}
+\end{center}
+
+\paragraph{}And finally, given that we were working in parallel, the case has to be reconstructed to show the results.
+
+\begin{center}
+\texttt{reconstructParMesh -constant\\
+reconstructPar}
+\end{center}
+
+\paragraph{}There has also been added into the folder the \texttt{Allrun} file, which will run the case automatically.
+
+\paragraph{}To view the results, typing \texttt{paraFoam} in the \texttt{terminal} window should be enough.

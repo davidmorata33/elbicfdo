@@ -1,5 +1,6 @@
-\subsection{ControlDict}
-\paragraph{}This file is really important for the simulation since it contains the timesteps that it will pursue . So, to begin, the initial and final times of the simulation have to be defined. In this case, the \textit{startTime} is 0 s and the \textit{endTime} has been set to $1*10^{-4}$ s. These changes can be made in the \texttt{system/controlDict} file. Furthermore, the application chosen is \textit{pimpleDyMFoam}, a modified pimpleFoam that handles dynamic meshes.
+\subsection{controlDict - parameters for the simulation}
+
+\paragraph{}This file is really important for the simulation since it contains the timesteps and other variables such as the \texttt{endTime} or \texttt{startTime}. To begin, the initial and final times of the simulation have to be defined. In this case, the \texttt{startTime} is 0 s and the \texttt{endTime} has been set to $1*10^{-3}$s. These changes can be made in the \texttt{system/controlDict} file. Furthermore, this file also states the application chosen (\textit{pimpleDyMFoam}), a modified pimpleFoam that handles dynamic meshes.
 
 \begin{footnotesize}
 \begin{verbatim}
@@ -11,21 +12,17 @@ startTime       0;
 
 stopAt          endTime;
 
-endTime         1e-4;
-
-
+endTime         1e-3;
 \end{verbatim}
 \end{footnotesize}
 
-\paragraph{}The next thing that has to be done is to define the time step for the simulation as well as the write interval (this is; the number of time that must pass in order to make a file for the simulation in the current simulation time). 
+\paragraph{}The next thing that has to be done is to define the time step for the simulation as well as the write interval (this is; the number of time that must pass in order to make a folder for the simulation in the current simulation time). 
 
 \begin{footnotesize}
 \begin{verbatim}
-deltaT          .5e-4;
-
+deltaT .5e-4;
 writeControl    timeStep;
-
-writeInterval   1;
+writeInterval 1;
 
 purgeWrite      0;
 
@@ -38,11 +35,10 @@ writeCompression off;
 timeFormat      general;
 
 timePrecision   6;
-
 \end{verbatim}
 \end{footnotesize}
 
-\paragraph{}It is noteworthy the \textit{runTimeModifiable}, which modifies the deltaT in each iteration to make possible the convergence. Since it is really clear what the other variables do, they will not be explained here. Finally, the file that has been used to run the simulation is presented below.
+\paragraph{}The \textit{runTimeModifiable} modifies the deltaT in each iteration to make possible for the solver to converge. Also, the maximum Courant number has been set to 2. Finally, the file that has been used to run the simulation is presented below.
 
 \begin{footnotesize}
 \begin{verbatim}
@@ -73,11 +69,9 @@ stopAt          endTime;
 
 endTime         1e-4;
 
-deltaT 		    .5e-4;
-
+deltaT .5e-4;
 writeControl    timeStep;
-
-writeInterval   1;
+writeInterval 1;
 
 purgeWrite      0;
 
@@ -98,6 +92,5 @@ adjustTimeStep  yes;
 maxCo           2;
 
 // ************************************************************************* //
-
 \end{verbatim}
 \end{footnotesize}
