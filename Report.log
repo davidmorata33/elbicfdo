@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.9.26)  9 DEC 2016 02:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.9.26)  9 DEC 2016 03:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1411,6 +1411,10 @@ Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks47
 \verbatim@line=\toks48
 \verbatim@in@stream=\read2
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/esvect/esvect.sty
+Package: esvect 
+\symesvector=\mathgroup6
 ))
 (./doc_config/doc_info.tex) (./doc_config/defined_stuff.tex) (./Report.aux)
 \openout1 = `Report.aux'.
@@ -1624,6 +1628,12 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 11.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+LaTeX Font Info:    Try loading font information for U+esvect on input line 11.
+
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/esvect/uesvect.fd
+File: uesvect.fd 
+)
 LaTeX Font Info:    Try loading font information for OT1+lmss on input line 11.
 
 
@@ -1638,7 +1648,7 @@ LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 11.
 File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 (./doc_config/cover.tex
-<./doc_config/images/openfoamlogotm.png, id=321, 845.1575pt x 144.54pt>
+<./doc_config/images/openfoamlogotm.png, id=341, 845.1575pt x 144.54pt>
 File: ./doc_config/images/openfoamlogotm.png Graphic file (type png)
 
 <use ./doc_config/images/openfoamlogotm.png>
@@ -1646,7 +1656,7 @@ Package pdftex.def Info: ./doc_config/images/openfoamlogotm.png used on input l
 ine 11.
 (pdftex.def)             Requested size: 195.0pt x 33.34935pt.
 
-<./doc_config/images/UPC_ESEIAAT.jpg, id=322, 782.925pt x 145.54375pt>
+<./doc_config/images/UPC_ESEIAAT.jpg, id=342, 782.925pt x 145.54375pt>
 File: ./doc_config/images/UPC_ESEIAAT.jpg Graphic file (type jpg)
 
 <use ./doc_config/images/UPC_ESEIAAT.jpg>
@@ -1701,7 +1711,7 @@ Package hyperref Warning: Difference (2) between bookmark levels is greater
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 5.
 
-<./img/TurbofanEtapas.png, id=363, 875.27pt x 579.16376pt>
+<./img/TurbofanEtapas.png, id=386, 875.27pt x 579.16376pt>
 File: ./img/TurbofanEtapas.png Graphic file (type png)
 
 <use ./img/TurbofanEtapas.png>
@@ -1715,7 +1725,7 @@ Overfull \hbox (3.86786pt too wide) in paragraph at lines 9--10
 [3
 
  <./img/TurbofanEtapas.png>]
-<./img/Turbofan.png, id=375, 722.7pt x 354.57469pt>
+<./img/Turbofan.png, id=397, 722.7pt x 354.57469pt>
 File: ./img/Turbofan.png Graphic file (type png)
  <use ./img/Turbofan.png>
 Package pdftex.def Info: ./img/Turbofan.png used on input line 18.
@@ -1797,7 +1807,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 180--181
 
  []
 
-[10] <./mesh/screenshots/blockmesh.png, id=412, 1565.85pt x 863.225pt>
+[10] <./mesh/screenshots/blockmesh.png, id=434, 1565.85pt x 863.225pt>
 File: ./mesh/screenshots/blockmesh.png Graphic file (type png)
 
 <use ./mesh/screenshots/blockmesh.png>
@@ -1845,7 +1855,7 @@ Overfull \hbox (14.24883pt too wide) in paragraph at lines 352--352
 ide a cell, even[] 
  []
 
-[16] [17] <./mesh/screenshots/coarse2.png, id=445, 1565.85pt x 863.225pt>
+[16] [17] <./mesh/screenshots/coarse2.png, id=467, 1565.85pt x 863.225pt>
 File: ./mesh/screenshots/coarse2.png Graphic file (type png)
 
 <use ./mesh/screenshots/coarse2.png>
@@ -1853,7 +1863,7 @@ Package pdftex.def Info: ./mesh/screenshots/coarse2.png used on input line 402.
 
 (pdftex.def)             Requested size: 375.81168pt x 207.17824pt.
 
-<./mesh/screenshots/coarse3.png, id=446, 1565.85pt x 863.225pt>
+<./mesh/screenshots/coarse3.png, id=468, 1565.85pt x 863.225pt>
 File: ./mesh/screenshots/coarse3.png Graphic file (type png)
 
 <use ./mesh/screenshots/coarse3.png>
@@ -1862,14 +1872,14 @@ Package pdftex.def Info: ./mesh/screenshots/coarse3.png used on input line 409.
 (pdftex.def)             Requested size: 375.81168pt x 207.17824pt.
  [18 <./mesh/screenshots/coarse2.png (PNG copy)> <./mesh/screenshots/coarse3.pn
 g (PNG copy)>]
-<./mesh/screenshots/std2.png, id=456, 1565.85pt x 863.225pt>
+<./mesh/screenshots/std2.png, id=479, 1565.85pt x 863.225pt>
 File: ./mesh/screenshots/std2.png Graphic file (type png)
 
 <use ./mesh/screenshots/std2.png>
 Package pdftex.def Info: ./mesh/screenshots/std2.png used on input line 420.
 (pdftex.def)             Requested size: 375.81168pt x 207.17824pt.
 
-<./mesh/screenshots/std3.png, id=457, 1565.85pt x 863.225pt>
+<./mesh/screenshots/std3.png, id=480, 1565.85pt x 863.225pt>
 File: ./mesh/screenshots/std3.png Graphic file (type png)
 
 <use ./mesh/screenshots/std3.png>
@@ -1877,7 +1887,7 @@ Package pdftex.def Info: ./mesh/screenshots/std3.png used on input line 427.
 (pdftex.def)             Requested size: 375.81168pt x 207.17824pt.
  [19 <./mesh/screenshots/std2.png (PNG copy)> <./mesh/screenshots/std3.png (PNG
  copy)>]
-<./mesh/screenshots/Xtreme3.png, id=466, 1565.85pt x 863.225pt>
+<./mesh/screenshots/Xtreme3.png, id=489, 1565.85pt x 863.225pt>
 File: ./mesh/screenshots/Xtreme3.png Graphic file (type png)
 
 <use ./mesh/screenshots/Xtreme3.png>
@@ -1885,7 +1895,7 @@ Package pdftex.def Info: ./mesh/screenshots/Xtreme3.png used on input line 446.
 
 (pdftex.def)             Requested size: 375.81168pt x 207.17824pt.
 
-<./mesh/screenshots/Xtreme5.png, id=467, 1565.85pt x 863.225pt>
+<./mesh/screenshots/Xtreme5.png, id=490, 1565.85pt x 863.225pt>
 File: ./mesh/screenshots/Xtreme5.png Graphic file (type png)
 
 <use ./mesh/screenshots/Xtreme5.png>
@@ -2387,12 +2397,21 @@ Underfull \hbox (badness 1072) in paragraph at lines 17--18
 e-com-posePar \T1/lmr/m/n/12 and the \T1/lmr/m/it/12 -p\T1/lmr/m/n/12 ).
  []
 
-)) [38] (./sections/postprocess.tex) (./Report.bbl [39
+)) [38] (./sections/postprocess.tex [39
 
-])
+] (./sections/results.tex
 
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 3.
+
+) [40] (./sections/conclusions.tex
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 3.
+
+)) (./Report.bbl [41]) 
 AED: lastpage setting LastPage
-[40
+[42
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 49.
@@ -2401,19 +2420,15 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 49.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 49.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 49.
 Package rerunfilecheck Info: File `Report.out' has not changed.
-(rerunfilecheck)             Checksum: 3FBB803AE9C1B6038005AD9B108E1272;4464.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
+(rerunfilecheck)             Checksum: E8CC6CF5116E941F925D4893248BA48C;4751.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 49.
  ) 
 Here is how much of TeX's memory you used:
- 28504 strings out of 493014
- 537458 string characters out of 6133351
- 602944 words of memory out of 5000000
- 31455 multiletter control sequences out of 15000+600000
- 51966 words of font info for 48 fonts, out of 8000000 for 9000
+ 28564 strings out of 493014
+ 538392 string characters out of 6133351
+ 603172 words of memory out of 5000000
+ 31490 multiletter control sequences out of 15000+600000
+ 52221 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,7n,77p,10480b,901s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/
@@ -2429,10 +2444,10 @@ dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2016/texmf-dist/fonts
 /type1/public/lm/lmsy8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/publ
 ic/lm/lmtt10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmtt
 12.pfb>
-Output written on Report.pdf (41 pages, 1640173 bytes).
+Output written on Report.pdf (43 pages, 1644173 bytes).
 PDF statistics:
- 639 PDF objects out of 1000 (max. 8388607)
- 567 compressed objects within 6 object streams
- 136 named destinations out of 1000 (max. 500000)
- 688 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 676 PDF objects out of 1000 (max. 8388607)
+ 601 compressed objects within 7 object streams
+ 145 named destinations out of 1000 (max. 500000)
+ 728 words of extra memory for PDF output out of 10000 (max. 10000000)
 
