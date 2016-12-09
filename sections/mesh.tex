@@ -48,7 +48,7 @@ blocks
 \end{verbatim}
 \end{footnotesize}
 
-\paragraph{}Finally, the differents faces of the mesh must be defined depending on whether they are the inlet or outlet faces or the lateral faces of the geometry.To do this, \textit{OpenFOAM} numbers the vertices according to their appearance in the \textit{blockMeshDict} and the faces are defined by four those numbers. Since the vertex numeration has been kept the same as the one that comes as default in every tutorial case; it is easier to define the inlet face of the \textit{blockMesh} (this is: the face in which the flow comes in) as well as the outlet face (this is: the face in which the flow comes out) that will be used to define the boundary conditions later.
+\paragraph{}Finally, the differents faces of the mesh must be defined depending on whether they are the inlet or outlet faces or the lateral faces of the geometry. To do this, \textit{OpenFOAM} numbers the vertices according to their appearance in the \textit{blockMeshDict} and the faces are defined by four those numbers. Since the vertex numeration has been kept the same as the one that comes as default in every tutorial case; it is easier to define the inlet face of the \textit{blockMesh} (this is: the face in which the flow comes in) as well as the outlet face (this is: the face in which the flow comes out) that will be used to define the boundary conditions later.
 
 \begin{footnotesize}
 \begin{verbatim}
@@ -255,7 +255,7 @@ End
 
 \paragraph{}To refine the mesh, the \textit{snappyHexMesh} utility is used (included in \textit{OpenFOAM}) and several parameters have to be modified in order to obtain a dense mesh that is suitable for the simulation of this complex geometry. It has to be considered that a particular geometry is has a relative velocity as well; this is, the rotor is rotating, and so the first and second stages of the Low Pressure Compression of the turbofan engine, while the nacelle and the combustor are static. 
 
-\paragraph{}In the \textit{snappyHexMeshDict} several parameters have to be modified. First, the \textit{snappyHexMesh} must be aware of the geometries that it has to take into account. As it can be seen below, the files \textit{Fan.stl}, \textit{HPSpool.stl}, \textit{LPSpool.stl} and \textit{NacelleStator.stl} have been included here.
+\paragraph{}In the \texttt{system/snappyHexMeshDict} several parameters have to be modified. First, the \textit{snappyHexMesh} must be aware of the geometries that it has to take into account. As it can be seen below, the files \textit{Fan.stl}, \textit{HPSpool.stl}, \textit{LPSpool.stl} and \textit{NacelleStator.stl} have been included here.
 
 \begin{footnotesize}
 \begin{verbatim}
