@@ -1,0 +1,39 @@
+\begin{thebibliography}{1}
+
+\bibitem{Nozaki9240}
+Fumiya Nozaki.
+\newblock {CFD for Rotating Machinery}.
+\newblock (May), 9240.
+
+\bibitem{Casacuberta2014}
+Jordi Casacuberta.
+\newblock {Study of fluid dynamics applications in the field of engineering by
+  using OpenFOAM}.
+\newblock 2014.
+
+\bibitem{Feedback}
+Learner Feedback.
+\newblock {Running in parallel}.
+\newblock pages 45--54.
+
+\bibitem{Paterson2010}
+Eric Paterson.
+\newblock {PENN STATE The icoFoam “ Cavity Tutorial ”}.
+\newblock (April), 2010.
+
+\bibitem{Petit2011}
+Olivier Petit.
+\newblock {Mesh generation: different ways of creating the mesh.}
+\newblock 2011.
+
+\bibitem{Pieri2014}
+Roberto Pieri.
+\newblock {A tool for pre-processing : snappyHexMesh}.
+\newblock (June), 2014.
+
+\bibitem{Rygg2013}
+Jone~Rivrud Rygg.
+\newblock {CFD Analysis of a Pelton Turbine in OpenFOAM}.
+\newblock {\em Thesis}, (June):119, 2013.
+
+\end{thebibliography}
