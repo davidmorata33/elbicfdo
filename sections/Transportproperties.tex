@@ -1,6 +1,6 @@
 \subsection{Properties of the flow}
 
-\paragraph{}The properties of the flow have to be defined taking into account the hypotheses made for the case. As mentioned in previous sections, the flow is assumed to be Newtonian. This property can be modified in the \textit{/constant/transportProperties} file. Also, since the flow we are dealing with is air, the kinematic viscosity has to be set to $1e-6 m^2/s$.
+\paragraph{}The properties of the flow have to be defined taking into account the hypotheses made for the case. As mentioned in previous sections, the flow is assumed to be Newtonian. This property can be modified in the \texttt{constant/transportProperties} file. Also, since the flow we are dealing with is air, the kinematic viscosity has to be set to $1e^{6} m^2/s$.
 
 \begin{footnotesize}
 \begin{verbatim}
@@ -29,7 +29,7 @@ nu              [0 2 -1 0 0 0 0] 1e-6;
 \end{verbatim}
 \end{footnotesize}
 
-\paragraph{}Another hypotheses that has been made in order to alleviate the computation time is that the flow is laminar, although it will not be a very realistic flow. To impose this condition, a modification has to be made in \textit{constant/turbulenceProperties} file and it is presented below.
+\paragraph{}Another hypotheses that has been made in order to alleviate the computation time is that the flow is laminar, although it will not be a very realistic flow. To impose this condition, a modification has to be made in \texttt{constant/turbulenceProperties} file and it is presented below.
 
 
 \begin{footnotesize}
