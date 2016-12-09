@@ -1,0 +1,50 @@
+#!/bin/sh
+cd ${0%/*} || exit 1    # Run from this directory
+
+#------------------------------------------------------------------------------
+# Mesh generation
+
+echo "Start meshing...\n
+· Creating BlockMesh"
+blockMesh > blockMesh.log
+
+#echo "· Run in parallel"
+#foamJob decomposePar
+#mv log decomposePar.log
+
+echo "· Meshing with snappyHexMesh...."
+surfaceFeatureExtract > surfaceFeatureExtract.log
+
+#foamJob -s -p snappyHexMesh -overwrite
+foamJob -s snappyHexMesh -overwrite
+mv log snappyHexMesh.log
+
+echo "· Creating patches for the AMI surface"
+createPatch -overwrite > createPatch.log
+
+#for non-parallel running
+checkMesh > checkMesh.log
+
+
+echo "\n End Meshing\n
+--------------------------------------------------------------------------------"
+
+#------------------------------------------------------------------------------
+# Solving the case
+
+#echo "· Copy 0.orig to 0"
+#cp -r 0.orig 0
+
+
+#echo "· Start simulation (rhopPimpleDyMFoam)"
+
+#foamJob rhoPimpleDyMFoam
+#mv log rhoPimpleDyMFoam.log
+
+#Parallel Running Only
+#reconstructParMesh -constant
+#reconstructPar
+
+
+
+#------------------------------------------------------------------------------
