@@ -2,11 +2,20 @@
 
 \subsubsection{Selection of the tutorial}
 
-\paragraph{}The selection of the tutorial case is the first thing that needs to be done to run the simulation of the case since all the files are linked and starting a new case would mean spending a lot of time creating files and establishing all these links in order to make \textit{OpenFOAM} run. Among all the tutorials that can be found on the \textit{OpenFOAM} folder, we have selected the \textbf{FALTA!} for several reasons.
+\paragraph{}The selection of the tutorial case is the first thing that needs to be done to run the simulation of the turbofan since all the files that will be used are linked and, starting a new case would mean spending a lot of time creating files and establishing all these links in order to make \textit{OpenFOAM} work properly. Among all the tutorials that can be found on the \textit{OpenFOAM} folder, we have selected the \textit{mixerVesselAMI2D} for several reasons. 
 
 \subsubsection{blockMesh}
 
-\paragraph{}The definition of the \textit{blockMeshDict} is the first part that needs to be modified. The \textit{blockMesh} must contain the geometry that has to be simulated and we must have an idea of the vertex of the parallelogram that will contain the first stages of the turbofan. In order to do that, the geometry has to be opened using either \textit{Salome} or \textit{Paraview}. Then the axes must be showed and write the points down on the \textit{blockMesh} file. This modification is presented below.
+\paragraph{}The definition of the \textit{blockMeshDict} is the first part that needs to be modified. The \textit{blockMesh} must contain the geometry that has to be simulated and we must have an idea of the vertices of the parallelogram that will contain the first stages of the compressor. In order to do that, the geometry has to be opened using either \textit{Salome} or \textit{Paraview}. Then the axes must be showed and the points have to be written down on the \textit{blockMesh} file.
+
+\begin{figure}
+\includegraphics[scale=0.26]{./mesh/screenshots/blockmesh}
+\centering
+\caption{blockMeshcaption}
+\label{axisparaview}
+\end{figure}
+
+\paragraph{}Now that the points enclosing the desired geometry are clear, they can be modified in the \textit{blockMeshDict} file. This change is presented below:
 
 \begin{footnotesize}
 \begin{verbatim}
