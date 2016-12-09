@@ -1,14 +1,13 @@
 \subsection{Properties of the flow}
-\paragraph{}The properties of the flow have to be defined taking into account the hypotheses made for the case. Given that the flow is air, the kinematic viscosity \textit{nu} ($\nu$) is $1.5e^{-5} m^2/s$. Also, as mentioned previously, the simulation will work with a Newtonian flow and this has to be defined here as well.
 
-\paragraph{}To change all these flow parameters and properties, the \textit{constant/transportProperties} file has to be modified as follows. There is no need to dedicate more time to this file since everything is really clear within it.
+\paragraph{}The properties of the flow have to be defined taking into account the hypotheses made for the case. As mentioned in previous sections, the flow is assumed to be Newtonian. This property can be modified in the \textit{/constant/transportProperties} file. Also, since the flow we are dealing with is air, the kinematic viscosity (\nu) has to be set to $1e-6 m^2/s$.
 
 \begin{footnotesize}
 \begin{verbatim}
 /*--------------------------------*- C++ -*----------------------------------*\
 | =========                 |                                                 |
 | \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
-|  \\    /   O peration     | Version:  4.0                                   |
+|  \\    /   O peration     | Version:  4.x                                   |
 |   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
 |    \\/     M anipulation  |                                                 |
 \*---------------------------------------------------------------------------*/
@@ -17,19 +16,20 @@ FoamFile
     version     2.0;
     format      ascii;
     class       dictionary;
+    location    "constant";
     object      transportProperties;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
 transportModel  Newtonian;
 
-nu              [0 2 -1 0 0 0 0] 1.5e-05;
+nu              [0 2 -1 0 0 0 0] 1e-6;
 
 // ************************************************************************* //
 \end{verbatim}
 \end{footnotesize}
 
-\paragraph{}Another hypotheses that has been made in order to alleviate the computation time is that the flow is laminar, although it would not be a very realistic flow in this case. To impose this condition, a modification has to be made in \textit{constant/turbulenceProperties} file.
+\paragraph{}Another hypotheses that has been made in order to alleviate the computation time is that the flow is laminar, although it will not be a very realistic flow. To impose this condition, a modification has to be made in \textit{constant/turbulenceProperties} file and it is presented below.
 
 
 \begin{footnotesize}
@@ -37,7 +37,7 @@ nu              [0 2 -1 0 0 0 0] 1.5e-05;
 /*--------------------------------*- C++ -*----------------------------------*\
 | =========                 |                                                 |
 | \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
-|  \\    /   O peration     | Version:  4.0                                   |
+|  \\    /   O peration     | Version:  4.x                                   |
 |   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
 |    \\/     M anipulation  |                                                 |
 \*---------------------------------------------------------------------------*/
@@ -46,24 +46,16 @@ FoamFile
     version     2.0;
     format      ascii;
     class       dictionary;
+    location    "constant";
     object      turbulenceProperties;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-simulationType laminar;
+simulationType  laminar;
 
-RAS
-{
-    RASModel            kOmegaSST;
-
-    turbulence          on;
-
-    printCoeffs         on;
-}
 
 // ************************************************************************* //
-
 \end{verbatim}
 \end{footnotesize}
 
-\paragraph{}Since we are only interested in the topology of the flow of this file, the other parameters have not been modified.
+\paragraph{}Since we are only interested in the topology of the flow of this file, other parameters have not been modified.
