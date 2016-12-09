@@ -523,22 +523,42 @@ geometry
 
 \paragraph{}To end with this section, the \textit{log} file that has been obtained when the mesh has been defined with the \textit{snappyHexMesh} utility is presented below. It has to be taken into account that it is a huge file since the number of iterations is really big and only the final part of the \textit{log} file is shown.
 
-\paragraph{}\textbf{FALTA POSAR AQUEST LOG!}
-
 \begin{footnotesize}
 \begin{verbatim}
-Snapped mesh : cells:1626270  faces:5479413  points:2344680
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  4.0                                   |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : 4.0-665f1db4c1f1
+Exec   : /opt/openfoam4/platforms/linux64GccDPInt32Opt/bin/snappyHexMesh -overwrite
+Date   : Dec 05 2016
+Time   : 14:17:06
+Host   : "victorPC"
+PID    : 4504
+Case   : /home/victor/Desktop/Final/pimpleDyMFoam/turbofan_std
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+
+[...]
+
+Snapped mesh : cells:3511624  faces:11081993  points:4202883
 Cells per refinement level:
-    0	8592
-    1	24456
-    2	126790
-    3	918976
-    4	299109
-    5	118950
-    6	129397
+    0	4602
+    1	38356
+    2	198997
+    3	1304463
+    4	1965206
 Writing mesh to time constant
-Wrote mesh in = 97.48 s.
-Mesh snapped in = 1121.77 s.
+Wrote mesh in = 153.87 s.
+Mesh snapped in = 1259.68 s.
 Checking final mesh ...
 Checking faces in error :
     non-orthogonality > 65  degrees                        : 0
@@ -546,12 +566,13 @@ Checking faces in error :
     faces with face-decomposition tet quality < 1e-15      : 0
     faces with concavity > 80  degrees                     : 0
     faces with skewness > 4   (internal) or 20  (boundary) : 0
-    faces with interpolation weights (0..1)  < 0.05        : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
     faces with volume ratio of neighbour cells < 0.01      : 0
     faces with face twist < 0.02                           : 0
     faces on cells with determinant < 0.001                : 0
 Finished meshing without any errors
-Finished meshing in = 1705 s.
+Finished meshing in = 2418.34 s.
 End
+
 \end{verbatim}
 \end{footnotesize}
