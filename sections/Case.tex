@@ -28,10 +28,10 @@
 	\item Viscous flow
 	\item Incompressible flow
 	\item Newtonian flow
-	\item Stationary flow
+	\item Transient flow
 	\item Laminar flow
 \end{itemize}
 
 \paragraph{}Clearly, the flow is not incompressible in reality; the aim of the turbofan is to compress the air to seek for a more efficient combustion. However, all of the compressible solvers are really difficult to use and the computational time is also higher given that we have a high number of control volumes (as discussed in the next section) due to a really complex geometry. Thus, although it will not be a completely real flow, we will be also able to see how the low pressure section of the engine increases the pressure of the flow and how the velocity field changes as it goes through the turbine.
 
-\paragraph{}The simulation will take into account that it is a tridimensional, that it behaves as a newtonian fluid and it will be run under stationary flow conditions (that is: the velocity in the inlet is always uniform and has a fixed value). With these hypothesis, we can begin to discuss the geometry of the \textit{blockMesh} as well as the refined mesh and the boundary conditions and final results within the next sections.
+\paragraph{}The simulation will take into account that it is a tridimensional, that it behaves as a newtonian fluid and it will be run under transient flow conditions (that is: the flow presents changes in its characteristics over time). With these hypothesis, we can begin to discuss the geometry of the \textit{blockMesh} as well as the refined mesh and the boundary conditions and final results within the next sections.
