@@ -465,7 +465,11 @@ geometry
 \subsubsection{Comparison of different types of mesh}
 
 
-\paragraph{}A comparison between the coarse mesh and the refined mesh generated is presented below. The mesh that has been used to simulate the case is the refined mesh (for obvious reasons). Also, it has to be kept in mind that the coarser the mesh, the worse that the geometry will be (this is, it will not resemble to the real geometry), as can be seen below.
+\paragraph{}A comparison between the meshes generated is presented below. Several meshes have been made in order to select the best one to perfom the simulation of the given case.
+
+\paragraph{}The mesh that has been used to simulate the case is the \textbf{Standard Mesh}. Since the computational power that we have is limited, a very dense mesh would end up in a very tedious process that could need several hours to be simulated. Thus, given that the standard mesh is pretty good already, we have selected it because the results will also be quite similar.
+
+\paragraph{}The aim of this section is to show that the difference between the dense mesh and the standard mesh is relatively small. The standard mesh has 2500000 number of cells, approximately, while the dense mesh has about 3500000 number of cells. It might seem a big difference but the critical geometries are really well meshed in both cases and only the non-critical parts of the turbofan (this is: the flow inside the fan duct) has a smaller number of cells in the standard mesh.
 
 \newpage\subsubsubsection{Coarse mesh}
 
@@ -490,14 +494,14 @@ geometry
 \paragraph{}Next, it is presented the standard mesh. It has a higher number of cells compared to the coarse mesh, but it cannot be used either given that the size of the turbine is pretty big. The figures \ref{standard1} and \ref{standard2} are a proof of that.
 
 \begin{figure}[h!]
-\includegraphics[scale=0.24]{./mesh/screenshots/std2}
+\includegraphics[scale=0.24]{./mesh/newmesh/std1}
 \centering
 \caption{Detail of the standard mesh}
 \label{standard1}
 \end{figure}
 
 \begin{figure}[h!]
-\includegraphics[scale=0.24]{./mesh/screenshots/std3}
+\includegraphics[scale=0.24]{./mesh/newmesh/std2}
 \centering
 \caption{Detail of the standard mesh}
 \label{standard2}
@@ -505,17 +509,17 @@ geometry
 
 \newpage\subsubsubsection{Dense mesh}
 
-\paragraph{}Finally, the dense mesh is presented. This is by far the best mesh that has been generated for the case. It can be clearly seen on \ref{dense2} and \ref{dense3}  that it can be suitable to run the simulation of the first stages of this turbofan.
+\paragraph{}Finally, the dense mesh is presented in the figures \ref{dense2} and \ref{dense3}. This is the best mesh that has been generated for the case but for the reasons commented below, this is not the mesh used to run the simulation.
 
 \begin{figure}[h!]
-\includegraphics[scale=0.24]{./mesh/screenshots/Xtreme3}
+\includegraphics[scale=0.24]{./mesh/newmesh/dense1}
 \centering
 \caption{Detail of the dense mesh}
 \label{dense2}
 \end{figure}
 
 \begin{figure}[h!]
-\includegraphics[scale=0.24]{./mesh/screenshots/Xtreme5}
+\includegraphics[scale=0.24]{./mesh/newmesh/dense2}
 \centering
 \caption{Detail of the dense mesh}
 \label{dense3}
