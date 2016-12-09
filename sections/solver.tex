@@ -15,25 +15,28 @@
 \frac{\partial U}{\partial t} + \nabla ·(\vec{u}\vec{u}) -\nabla·(\nu\nabla\vec{u})= -\nabla p
 \end{equation}
 
-The pressure equation is deduced from the momentum equation (the procedure can be reviewed in the \textit{OpenFoam} literature) and is:
+\paragraph{}The pressure equation is deduced from the momentum equation (the procedure can be reviewed in the \textit{OpenFoam} literature) and is:
 
 \begin{equation}
 \nabla\left(\frac{1}{a_p}\nabla p \right )=\nabla\left(\frac{H(\vec{U})}{a_p}\right )=\sum_{f}\vec{S}\left(\frac{H(\vec{U})}{a_p}\right )_f
 \end{equation}
 
-The SIMPLE algorithm is used for solving steady-state problems iteratively. In this situations, is not necessary to solve comletely the coupling between velocity and pressure, so the simple algorithm works as follows:
-\begin{list}
+\paragraph{}The SIMPLE algorithm is used for solving steady-state problems iteratively. In this situations, is not necessary to solve comletely the coupling between velocity and pressure, so the simple algorithm works as follows:
+
+\begin{enumerate}
 \item Solving the momentum equation gives an approximation of the velocity using as the pressure gradient the previous iteration pressure distribution.
 \item The current timestep pressure is later calculated using the pressure equation. 
 \item The velocities are corrected using the new pressure gradient.
-\end{list}
+\end{enumerate}
 
 \paragraph{}As it can be seen, it uses an implicit method for solving the momentum equation and the pressure equation, but then, it corrects 
 If a steady-state problem is being solved iteratively, it is not necessary to fully resolve the linear pressure-velocity coupling, as the changes between consecutive solutions are no longer small. The SIMPLE algorithm:
 
 \subsubsection{PISO algorithm}
+
 \paragraph{}The PISO (Pressure Implicit with Split Operator) algorithm is an lgoritm used for non-iterative, large time-steps and unsteady problems. It involves one predictor step and two corrector steps an it is designed to fulfill the mass conservation equation. The algorithm is the following.
-\begin{list}
+
+\begin{enumerate}
 \item Solve a discetized momentum equation to compute an intermediate velocity field.
 \item Compute the mass fluxes at the cell faces.
 \item Solve the pressure equation.
@@ -42,9 +45,8 @@ If a steady-state problem is being solved iteratively, it is not necessary to fu
 \item Recalculate the boundary conditions.
 \item Repeat the process a prescribed number of times.
 \item Increase the time step and repeat from 1.
-
-\end{list}
+\end{enumerate}
 
 As it can be seenthe predictor step is set when computing the \textit{p} distribution and then the two corrector steps are applied. With PISO the timestep can be larger than the used with SIMPLE.
 
-In summary, the PIMPLE algorithm is a combinaton between these two schemes, acquiring the capacity to use larger timesteps than SIMPLE and speeding up the simulation since it can use PISO (non iterative) for some of the cells.
+\paragraph{}In summary, the PIMPLE algorithm is a combinaton between these two schemes, acquiring the capacity to use larger timesteps than SIMPLE and speeding up the simulation since it can use PISO (non iterative) for some of the cells.
