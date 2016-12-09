@@ -1,6 +1,6 @@
 \subsection{fvSchemes and fvSolution}
 \paragraph{}
-The fvSchemes dictionary contains the numerical schemes that they are used in the simulation. In the hypotheses section we have considered that the flow is transient To impose this condition we must modify the \texttt{system/fvSchemes} file, the section of \textit{ddtSchemes}, which is the temporal integration scheme. We must write Euler. Finally, the file that has been used to run the simulation is presented below.
+The fvSchemes dictionary contains the numerical schemes that they are used in the simulation. In the hypotheses section we have considered that the flow is transient To impose this condition we must modify the \texttt{system/fvSchemes} file, the section of \textit{ddtSchemes}, which is the temporal integration scheme. We must write Euler. It is important to remark that the fle has been modified form the presented in the tutorial because on our case, any turbulent model has been considered so all the variables related to the turbulence had been deleted. The most imprtant change had been done to the \textit{divSchemes} section where we changed the Gauss Linear Upwind scheme to a lower order (and more stable) Gauss Upwind scheme. Finally, the file that has been used to run the simulation is presented below.
 
 \begin{footnotesize}
 \begin{verbatim}
@@ -36,8 +36,8 @@ gradSchemes
 divSchemes
 {
     default         none;
-//    div(phi,U)      Gauss upwind;
-    div(phi,U)      Gauss linearUpwind grad(U);
+    div(phi,U)      Gauss upwind;
+    //div(phi,U)      Gauss linearUpwind grad(U);
     div((nuEff*dev2(T(grad(U))))) Gauss linear;
 }
 
@@ -64,7 +64,7 @@ snGradSchemes
 
 
 \paragraph{}
-The \texttt{system/fvSolution} file contains the resolution methods and the tolerances for each equation, but in our case it has not been modified. So, the file fvSolution for the current case is the following:
+The \texttt{system/fvSolution} file contains the resolution methods and the tolerances for each equation, in our case, the relaxation factors have been odified to achieve a more stable convergence. Also, the number of PIMPLE iterations have been modified. The fvSolution file including all the changes done is the following:
 
 
 \begin{footnotesize}
@@ -138,7 +138,7 @@ PIMPLE
 
 relaxationFactors
 {
-    U       0.5;
+    "(p|U).*"       0.5;
     UFinal  1;
 }
 
