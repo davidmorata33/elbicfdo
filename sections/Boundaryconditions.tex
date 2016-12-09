@@ -131,3 +131,7 @@ boundaryField
 // ************************************************************************* //
 \end{verbatim}
 \end{footnotesize}
+
+\paragraph{}The \textit{zeroGradient} condition simply extrapolates the quantity to the current surface from the nearest cell value meaning that the gradient of the quantity is equal to zero in the direction perpendicular to the partch. This condition will not fix a value for the pressure, it will just let the pressure be the same as the calculated using the Navier Stokes equations (provided that the velocity field is known).
+
+\paragraph{}Finally, the boundary conditions for the \textit{AMI1} and \textit{AMI2} should not be modified since they are specifically set for a geometry that is rotating.
