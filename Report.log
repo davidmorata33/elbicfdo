@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.9.26)  9 DEC 2016 16:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.9.26)  9 DEC 2016 16:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2473,25 +2473,35 @@ Package hyperref Warning: Difference (2) between bookmark levels is greater
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 3.
 
-))
-No file Report.bbl.
-
+)) (./Report.bbl [42]) 
 AED: lastpage setting LastPage
-[42]
+[43
+
+]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 49.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 49.
  (./Report.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 49.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 49.
-Package rerunfilecheck Info: File `Report.out' has not changed.
-(rerunfilecheck)             Checksum: E0DE9A37E9C7B970CD5714EE5541290A;4762.
+
+
+Package rerunfilecheck Warning: File `Report.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Report.out':
+(rerunfilecheck)             Before: E0DE9A37E9C7B970CD5714EE5541290A;4762
+(rerunfilecheck)             After:  9455F8A7600EFECE9E8CCB896770921C;4808.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 49.
  ) 
 Here is how much of TeX's memory you used:
- 28555 strings out of 493014
- 538337 string characters out of 6133351
+ 28573 strings out of 493014
+ 538566 string characters out of 6133351
  603000 words of memory out of 5000000
- 31488 multiletter control sequences out of 15000+600000
+ 31495 multiletter control sequences out of 15000+600000
  52221 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,7n,77p,10480b,905s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2508,10 +2518,10 @@ dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2016/texmf-dist/fonts
 /type1/public/lm/lmsy8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/publ
 ic/lm/lmtt10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmtt
 12.pfb>
-Output written on Report.pdf (43 pages, 1751188 bytes).
+Output written on Report.pdf (44 pages, 1753300 bytes).
 PDF statistics:
- 667 PDF objects out of 1000 (max. 8388607)
- 592 compressed objects within 6 object streams
- 139 named destinations out of 1000 (max. 500000)
+ 682 PDF objects out of 1000 (max. 8388607)
+ 605 compressed objects within 7 object streams
+ 148 named destinations out of 1000 (max. 500000)
  733 words of extra memory for PDF output out of 10000 (max. 10000000)
 
