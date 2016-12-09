@@ -7,11 +7,11 @@
 \*---------------------------------------------------------------------------*/
 Build  : 4.0-665f1db4c1f1
 Exec   : checkMesh
-Date   : Dec 09 2016
-Time   : 14:58:13
+Date   : Dec 05 2016
+Time   : 19:24:31
 Host   : "victorPC"
-PID    : 5904
-Case   : /home/victor/Desktop/Final/pimpleDyMFoam/turbofan_std
+PID    : 4598
+Case   : /home/victor/Desktop/turbofan
 nProcs : 1
 sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
 fileModificationChecking : Monitoring run-time modified files using timeStampMaster
@@ -20,47 +20,51 @@ allowSystemOperations : Allowing user-supplied system call operations
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 Create time
 
-Create polyMesh for time = 0
+--> FOAM Warning : 
+    From function static Foam::instantList Foam::timeSelector::select0(Foam::Time&, const Foam::argList&)
+    in file db/Time/timeSelector.C at line 270
+    No time specified or available, selecting 'constant'
+Create polyMesh for time = constant
 
-Time = 0
+Time = constant
 
 Mesh stats
-    points:           4202883
-    faces:            11081993
-    internal faces:   10112571
-    cells:            3511624
-    faces per cell:   6.03554
+    points:           3041731
+    faces:            7969935
+    internal faces:   7230304
+    cells:            2522441
+    faces per cell:   6.026
     boundary patches: 6
     point zones:      0
     face zones:       1
     cell zones:       1
 
 Overall number of cells of each type:
-    hexahedra:     2899217
-    prisms:        166624
+    hexahedra:     2085085
+    prisms:        105950
     wedges:        0
     pyramids:      0
-    tet wedges:    1608
-    tetrahedra:    20
-    polyhedra:     444155
+    tet wedges:    1267
+    tetrahedra:    27
+    polyhedra:     330112
     Breakdown of polyhedra by number of faces:
         faces   number of cells
-            4   146663
-            5   98776
-            6   55919
-            7   1701
-            8   1648
-            9   76892
-           10   622
-           11   586
-           12   38696
-           13   184
-           14   361
-           15   18661
-           16   6
-           17   38
-           18   3366
-           21   36
+            4   116290
+            5   77755
+            6   36807
+            7   2382
+            8   2453
+            9   51174
+           10   607
+           11   770
+           12   22688
+           13   274
+           14   389
+           15   15309
+           16   30
+           17   72
+           18   3111
+           21   1
 
 Checking topology...
     Boundary definition OK.
@@ -68,36 +72,32 @@ Checking topology...
     Point usage OK.
     Upper triangular ordering OK.
     Face vertices OK.
-   *Number of regions: 3
-    The mesh has multiple regions which are not connected by any face.
-  <<Writing region information to "0/cellToRegion"
-  <<Writing region 0 with 925067 cells to cellSet region0
-  <<Writing region 1 with 2586556 cells to cellSet region1
-  <<Writing region 2 with 1 cells to cellSet region2
+    Number of regions: 1 (OK).
 
 Checking patch topology for multiply connected surfaces...
                    Patch    Faces   Points                  Surface topology
-                   inlet    19705    21337  ok (non-closed singly connected)
-                  outlet    16866    19518  ok (non-closed singly connected)
-                 LPSpool   538810   633027  ok (non-closed singly connected)
-           NacelleStator   378402   449789  ok (non-closed singly connected)
-                    AMI1     7816     8362  ok (non-closed singly connected)
-                    AMI2     7823     8506  ok (non-closed singly connected)
+                   inlet    11685    12488  ok (non-closed singly connected)
+                  outlet     6410     7707  ok (non-closed singly connected)
+                 LPSpool   537648   631640  ok (non-closed singly connected)
+           NacelleStator   172722   217913  multiply connected (shared edge)
+                    AMI1     5583     5775  ok (non-closed singly connected)
+                    AMI2     5583     5811  ok (non-closed singly connected)
+  <<Writing 2 conflicting points to set nonManifoldPoints
 
 Checking geometry...
-    Overall domain bounding box (0.77 0.115381 0.106435) (1.35 2.21448 2.20605)
+    Overall domain bounding box (0.77 0.115495 0.106656) (1.35 2.21443 2.20599)
     Mesh has 3 geometric (non-empty/wedge) directions (1 1 1)
     Mesh has 3 solution (non-empty) directions (1 1 1)
-    Boundary openness (-7.12163e-17 -1.37672e-16 5.66184e-17) OK.
-    Max cell openness = 4.28393e-16 OK.
-    Max aspect ratio = 20.9739 OK.
-    Minimum face area = 8.56533e-10. Maximum face area = 0.00265493.  Face area magnitudes OK.
-    Min volume = 3.04103e-12. Max volume = 0.00013339.  Total volume = 1.87761.  Cell volumes OK.
-    Mesh non-orthogonality Max: 64.9091 average: 11.0021
+    Boundary openness (4.12283e-16 -1.46559e-16 1.42131e-16) OK.
+    Max cell openness = 4.10842e-16 OK.
+    Max aspect ratio = 10.7936 OK.
+    Minimum face area = 8.56533e-10. Maximum face area = 0.002683.  Face area magnitudes OK.
+    Min volume = 1.88435e-09. Max volume = 0.000135167.  Total volume = 1.87506.  Cell volumes OK.
+    Mesh non-orthogonality Max: 64.9921 average: 11.5854
     Non-orthogonality check OK.
     Face pyramids OK.
- ***Max skewness = 14.0863, 289 highly skew faces detected which may impair the quality of the results
-  <<Writing 289 skew faces to set skewFaces
+ ***Max skewness = 13.9612, 292 highly skew faces detected which may impair the quality of the results
+  <<Writing 292 skew faces to set skewFaces
     Coupled point location match (average 0) OK.
 
 Failed 1 mesh checks.
