@@ -8,7 +8,7 @@
 \paragraph{}Then we have to modify all the parameters explained during this report. The first thing that must be done when the \textit{blockMeshDict} has been modified is to type the following lines in a terminal. As it can be seen, it will save the log on a new file named blockMesh.log.
 
 \begin{center}
-\texttt{blockMesh >blockMesh.log}
+\texttt{blockMesh > blockMesh.log}
 \end{center}
 
 \paragraph{}When the \textit{blockMesh} has been generated, the next thing to do is the refinement of the mesh. So, the \textit{snappyHexMesh} utility will be used, provided that all the parameters in \texttt{system/snappyHexMeshDict} have been modified. In the terminal, the following command has to be typed:
@@ -50,4 +50,4 @@ reconstructPar}
 
 \paragraph{}There has also been added into the folder the \texttt{Allrun} file, which will run the case automatically.
 
-\paragraph{}To view the results, typing \texttt{paraFoam} in the \texttt{terminal} window should be enough.
+\paragraph{}To view the results, typing \texttt{paraFoam} in the \texttt{terminal} window should be enough. The .zip folder of the case delivered along with this report contains an Allrun and an Allclean scripts to automatize all these commands.
