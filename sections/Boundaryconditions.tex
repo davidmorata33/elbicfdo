@@ -1,59 +1,9 @@
 \subsection{Boundary conditions}
 
-\paragraph{}Some initial conditions and values have to be defined in order to run the simulation. The initial velocity field and pressure are especially important since these inputs are the starting values of the simulation. So, it is clear that the values at the \textit{inlet}, which was defined within the previous sections, have to be defined. Additionally, the values at the \textit{outlet} of the geometry have to be defined as well, but the can be, unlike the \textit{inlet}, not fixed values. Thus, the following modifications have to be made in the  \textit{0.orig/U}.
 
-\begin{footnotesize}
-\begin{verbatim}
-internalField   uniform (0 0 0);
+\subsubsection{Velocity}
 
-boundaryField
-{
-	[...]
-	    inlet
-    {
-        type            fixedValue;
-	value		uniform (30 0 0);
-    }
-
-    outlet
-    {
-        type            zeroGradient;
-    }
-}
-[...]
-\end{verbatim}
-\end{footnotesize}
-	
-\paragraph{}These conditions for the pressure have to be modified as well in the \textit{0.orig/p} file.
-
-\begin{footnotesize}
-\begin{verbatim}
-internalField   uniform 0;
-
-boundaryField
-{
-	[...]
-    inlet
-    {
-        type            fixedValue;
-	    value		    uniform 0;
-    }
-
-    outlet
-    {
-        type            zeroGradient;
-    }
-}
-[...]
-\end{verbatim}
-\end{footnotesize}
-
-
-\paragraph{}Given that we have more solids that will be simulated (the Nacelle and the rotor), their conditions for the velocity and the pressure have to be defined as well. Since we have a newtonian flow, the condition for the velocity in these solids will be  the \textit{noSlip} condition. For the pressure, the condition will be the \textit{zeroGradient} condition.
-
-\paragraph{}Finally, both files are presented below. These are the files that have been used to run the simulation for this case.
-
-\paragraph{}\textbf{Velocity}
+\paragraph{}Some initial conditions and values have to be defined in order to run the simulation. The initial velocity field and pressure are especially important since these inputs are the starting values of the simulation. So, it is clear that the values at the \textit{inlet}, which was defined within the previous sections, have to be defined. Additionally, the values at the \textit{outlet} of the geometry have to be defined as well, but they can be, unlike the \textit{inlet}, not fixed values. Thus, the following modifications have to be made in the  \textit{0.orig/U}.
 
 \begin{footnotesize}
 \begin{verbatim}
@@ -67,8 +17,9 @@ boundaryField
 FoamFile
 {
     version     2.0;
-    format      ascii;
+    format      binary;
     class       volVectorField;
+    location    "0";
     object      U;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
@@ -79,34 +30,48 @@ internalField   uniform (0 0 0);
 
 boundaryField
 {
-    LPSpool.stl
-    {
-        type            noSlip;
-    }
-
-    NacelleStator.stl
-    {
-        type            noSlip;
-    }
-
     inlet
     {
         type            fixedValue;
-	value		uniform (30 0 0);
+        value           uniform (200 0 0);
     }
-
     outlet
     {
-        type            zeroGradient;
+        type            inletOutlet;
+        inletValue      uniform (0 0 0);
+        value           uniform (0 0 0);
+    }
+    LPSpool
+    {
+        type            movingWallVelocity;
+        value           uniform (0 0 0);
+    }
+    NacelleStator
+    {
+        type            noSlip;
+    }
+    AMI1
+    {
+        type            cyclicAMI;
+        value           uniform (0 0 0);
+    }
+    AMI2
+    {
+        type            cyclicAMI;
+        value           uniform (0 0 0);
     }
 }
 
-// ************************************************************************* //
 
+// ************************************************************************* //
 \end{verbatim}
 \end{footnotesize}
 
-\paragraph{}\textbf{Pressure}
+\paragraph{}As it can be seen above, the value of the velocity at the inlet has been set to 200 $m/s$ (about 720 $km/h$). The \textit{inletOutlet} condition has been set to the outlet (this is: the flow is restricted to move always forwards and reverse flow cannot appear at this region). The NacelleStator file has the noSlip condition given that the fluid is supposed to be Newtonian. Finally, the initial velocity field for the rotational parts AMI1 and AMI2 have been to 0 (this is: the flow is not moving at the beginning of the simulation).
+
+\subsubsection{Pressure}
+
+\paragraph{}The initial conditions for the pressure have to be evaluated as well in the \textit{0.orig/p} file.
 
 \begin{footnotesize}
 \begin{verbatim}
@@ -120,8 +85,9 @@ boundaryField
 FoamFile
 {
     version     2.0;
-    format      ascii;
+    format      binary;
     class       volScalarField;
+    location    "0";
     object      p;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
@@ -132,29 +98,36 @@ internalField   uniform 0;
 
 boundaryField
 {
-    LPSpool.stl
-    {
-        type            zeroGradient;
-    }
-
-    NacelleStator.stl
-    {
-        type            zeroGradient;
-    }
-
     inlet
     {
-        type            fixedValue;
-	    value		    uniform 0;
+        type            zeroGradient;
     }
-
     outlet
     {
+        type            fixedValue;
+        value           uniform 0;
+    }
+    LPSpool
+    {
         type            zeroGradient;
+    }
+    NacelleStator
+    {
+        type            zeroGradient;
+    }
+    AMI1
+    {
+        type            cyclicAMI;
+        value           uniform 0;
+    }
+    AMI2
+    {
+        type            cyclicAMI;
+        value           uniform 0;
     }
 }
 
-// ************************************************************************* //
 
+// ************************************************************************* //
 \end{verbatim}
 \end{footnotesize}
