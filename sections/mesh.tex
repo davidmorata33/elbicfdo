@@ -271,49 +271,58 @@ geometry
     Fan.stl
     {
         type triSurfaceMesh;
-        regions
-        {
-        }
+ 	name Fan;
     }
+
     HPSpool.stl
     {
         type triSurfaceMesh;
-        regions
-        {
-        }
+	name HPSpool;
     }
+
     LPSpool.stl
     {
         type triSurfaceMesh;
-        regions
-        {
-        }
+	name LPSpool;
     }
+
     NacelleStator.stl
     {
         type triSurfaceMesh;
-        regions
-        {
-        }
+	name NacelleStator;
+    }
+
+    AMI.stl    //used for the dynamic mesh (the domain where the mesh  rotating)
+    {
+        type        triSurfaceMesh;
+        name        AMI;
     }
 };
 \end{verbatim}
 \end{footnotesize}
 
-\paragraph{}Next, the number of control volumes has to be limited to ensure that the laptop is capable of running a simulation. This number has been limited to two million cells, which is a pretty high number and the following lines have to be modified.
+\paragraph{}Next, the number of control volumes has to be limited to ensure that the laptop is capable of running a simulation. This number has been limited to four million cells, which is a pretty high number and the following lines have to be modified. Also, the maximum local number of control volumes has been limited to two million.
 
 \begin{footnotesize}
 \begin{verbatim}
+    // Refinement parameters
+    // ~~~~~~~~~~~~~~~~~~~~~
+
+    // If local number of cells is >= maxLocalCells on any processor
+    // switches from from refinement followed by balancing
+    // (current method) to (weighted) balancing before refinement.
+    maxLocalCells 2000000;
+
     // Overall cell limit (approximately). Refinement will stop immediately
     // upon reaching this number so a refinement level might not complete.
     // Note that this is the number of cells before removing the part which
     // is not 'visible' from the keepPoint. The final number of cells might
     // actually be a lot less.
-    maxGlobalCells 2000000;
+    maxGlobalCells 4000000;
 \end{verbatim}
 \end{footnotesize}
 
-\paragraph{}The next step is to define the refinement required of the mesh for the different geometries that will be simulated. It can be clearly seen in this section that we have included the same \textit{STL} files that we did before. The higher the level of the refinement, the denser the mesh will be and the better it will resemble to the real geometry. But the limitation here is the computational power so, the maximum refinement number cannot be as high as we would like to. Thus, depending on the complexity of the geometry, several minimum (the first number) and maximum (the second number) refinement leves have been defined.
+\paragraph{}The next step is to define the required minimum and maximum refinement levels of the mesh for the different geometries that will be simulated. It can be clearly seen in this section that we have included the same \textit{STL} files that we did before. The higher the level of the refinement, the denser the mesh will be and the better it will resemble to the real geometry. But the limitation here is the computational power available so, the maximum refinement number cannot be as high as we would like to. Thus, depending on the complexity of the geometry, several minimum (the first number) and maximum (the second number) refinement levels have been defined.
 
 \begin{footnotesize}
 \begin{verbatim}
@@ -328,81 +337,78 @@ geometry
 
     refinementSurfaces
     {
-        Fan.stl
+
+        LPSpool
         {
             // Surface-wise min and max refinement level
-            level (3 5);
-
-            // Optional region-wise level specification
-            regions
-            {
-            }
+            level (3 4);
             patchInfo
             {
-                type patch;
-                inGroups (meshedPatches);
+                type wall;
+                inGroups (movingWalls);
             }
 	}
-        HPSpool.stl
+        NacelleStator
         {
             // Surface-wise min and max refinement level
-            level (3 5);
-
-            // Optional region-wise level specification
-            regions
-            {
-            }
+            level (2 3);
             patchInfo
             {
-                type patch;
-                inGroups (meshedPatches);
+                type wall;
+                inGroups (staticWalls);
             }
 	}
-        LPSpool.stl
+
+        Fan
         {
             // Surface-wise min and max refinement level
-            level (6 8);
-	    cellZone rotor; cellZoneInside inside;
-
-            // Optional region-wise level specification
-            regions
-            {
-            }
+            level (1 2);
             patchInfo
             {
-                type patch;
-                inGroups (meshedPatches);
+                type wall;
+                inGroups (movingWalls);
             }
 	}
-        NacelleStator.stl
+
+        HPSpool
         {
             // Surface-wise min and max refinement level
-            level (4 6);
-
-            // Optional region-wise level specification
-            regions
-            {
-            }
+            level (1 2);
             patchInfo
             {
-                type patch;
-                inGroups (meshedPatches);
+                type wall;
+                inGroups (movingWalls);
             }
 	}
+
+        AMI
+        {
+            level (2 3);
+            
+            faceType boundary;
+            cellZone innerAMI;
+            faceZone innerAMI;
+            cellZoneInside inside;
+        }
     }
+
 \end{verbatim}
 \end{footnotesize}
 
-\paragraph{}It is worth mentioning that a zone has been defined within  the \textit{LPSpool.stl} of the surface refinement from above. The MFR options must have a particular set of cellzones defined that will rotate. So, in order to make these first stages of the compressor to rotate, this has to be defined.
+\paragraph{}It is worth mentioning that new zones have been created in the file. As it can be seen above, the 'AMI' zone has been defined given that it will be the rotating zone of the turbofan. Also, besides the level of refinement for each geometry, it can be seen that it has been defined a type of group for each of them. So, the zones are now assembled into either the rotating geometry or static geometry.
 
 \begin{footnotesize}
 \begin{verbatim}
-        LPSpool.stl
+        LPSpool
         {
             // Surface-wise min and max refinement level
-            level (6 8);
-	    cellZone rotor; cellZoneInside inside;
-		[...] %MODIFIED ^
+            level (3 4);
+            patchInfo
+            {
+                type wall;
+                inGroups (movingWalls);
+            }   //^MODIFIED PART
+	}
 \end{verbatim}
 \end{footnotesize}
 
@@ -411,12 +417,21 @@ geometry
 
 \begin{footnotesize}
 \begin{verbatim}
+    // Mesh selection
+    // ~~~~~~~~~~~~~~
+
     // After refinement patches get added for all refinementSurfaces and
     // all cells intersecting the surfaces get put into these patches. The
     // section reachable from the locationInMesh is kept.
     // NOTE: This point should never be on a face, always inside a cell, even
     // after refinement.
-    locationInMesh (.97443222 1.40534444343 1.24221211);
+    // This is an outside point locationInMesh (-0.033 -0.033 0.0033);
+    locationInMesh (.97443222 1.40534444343 1.24221211); // Inside point
+
+    // Whether any faceZones (as specified in the refinementSurfaces)
+    // are only on the boundary of corresponding cellZones or also allow
+    // free-standing zone faces. Not used if there are no faceZones.
+    allowFreeStandingZoneFaces false;
 \end{verbatim}
 \end{footnotesize}
 
@@ -424,35 +439,28 @@ geometry
 
 \begin{footnotesize}
 \begin{verbatim}
-   // Explicit feature edge refinement
+    // Explicit feature edge refinement
     // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    // Specifies a level for any cell intersected by explicitly provided
-    // edges.
+    // Specifies a level for any cell intersected by its edges.
     // This is a featureEdgeMesh, read from constant/triSurface for now.
-    // Specify 'levels' in the same way as the 'distance' mode in the
-    // refinementRegions (see below). The old specification
-    //      level   2;
-    // is equivalent to
-    //      levels  ((0 2));
-
     features
     (
         {
            file "NacelleStator.eMesh";
-           level 5;
+           level 2;
         //    levels ((0.0 2) (1.0 3));
         }
         {
            file "LPSpool.eMesh";
-           level 7;
+           level 3;
         //    levels ((0.0 2) (1.0 3));
         }
     );
 \end{verbatim}
 \end{footnotesize}
 
-\paragraph{}All of the other parameters of the \textit{snappyHexMeshDict} have not been modified.
+\paragraph{}All of the other parameters of the \textit{snappyHexMeshDict} have not been modified. 
 
 \subsubsection{Comparison of different types of mesh}
 
@@ -464,14 +472,14 @@ geometry
 \paragraph{}The number of control volumes in the mesh is 40, which is a very small number given the size of the turbofan. It can be seen in \ref{coarse1} and \ref{coarse2} that this mesh cannot be used to run a simulation.
 
 \begin{figure}[h!]
-\includegraphics[scale=0.24]{./mesh/screenshots/coarse2}
+\includegraphics[scale=0.25]{./mesh/newmesh/coarse15}
 \centering
 \caption{Detail of the coarse mesh}
 \label{coarse1}
 \end{figure}
 
 \begin{figure}[h!]
-\includegraphics[scale=0.24]{./mesh/screenshots/coarse3}
+\includegraphics[scale=0.25]{./mesh/newmesh/coarse19}
 \centering
 \caption{Detail of the coarse mesh}
 \label{coarse2}
@@ -499,14 +507,6 @@ geometry
 
 \paragraph{}Finally, the dense mesh is presented. This is by far the best mesh that has been generated for the case. It can be clearly seen on \ref{dense2} and \ref{dense3}  that it can be suitable to run the simulation of the first stages of this turbofan.
 
-
-%\begin{figure}[h!]
-%\includegraphics[scale=0.26]{./mesh/screenshots/Xtreme1}
-%\centering
-%\caption{Detail of the dense mesh}
-%\label{dense1}
-%\end{figure}
-
 \begin{figure}[h!]
 \includegraphics[scale=0.24]{./mesh/screenshots/Xtreme3}
 \centering
@@ -522,6 +522,8 @@ geometry
 \end{figure}
 
 \paragraph{}To end with this section, the \textit{log} file that has been obtained when the mesh has been defined with the \textit{snappyHexMesh} utility is presented below. It has to be taken into account that it is a huge file since the number of iterations is really big and only the final part of the \textit{log} file is shown.
+
+\paragraph{}\textbf{FALTA POSAR AQUEST LOG!}
 
 \begin{footnotesize}
 \begin{verbatim}
