@@ -467,16 +467,18 @@ geometry
 
 \paragraph{}A comparison between the meshes generated is presented below. Several meshes have been made in order to select the best one to perfom the simulation of the given case.
 
-\paragraph{}The mesh that has been used to simulate the case is the \textbf{Standard Mesh}. Since the computational power that we have is limited, a very dense mesh would end up in a very tedious process that could need several hours to be simulated. Thus, given that the standard mesh is pretty good already, we have selected it because the results will also be quite similar.
+\paragraph{}The mesh that has been used to simulate the case is the \textbf{Standard Mesh}. Since the computational power that we have available is limited, a very dense mesh would end up in a very tedious process that could take several hours in order to be simulated. Thus, given that the standard mesh is pretty good already, we have selected it because the results will also be quite similar.
 
 \paragraph{}The aim of this section is to show that the difference between the dense mesh and the standard mesh is relatively small. The standard mesh has 2500000 number of cells, approximately, while the dense mesh has about 3500000 number of cells. It might seem a big difference but the critical geometries are really well meshed in both cases and only the non-critical parts of the turbofan (this is: the flow inside the fan duct) has a smaller number of cells in the standard mesh.
+
+\paragraph{}So, for all these reasons, the Standard Mesh has been selected and we will begin the simulation with it.
 
 \newpage\subsubsubsection{Coarse mesh}
 
 \paragraph{}The number of control volumes in the mesh is 40, which is a very small number given the size of the turbofan. It can be seen in \ref{coarse1} and \ref{coarse2} that this mesh cannot be used to run a simulation.
 
 \begin{figure}[h!]
-\includegraphics[scale=0.25]{./mesh/newmesh/coarse15}
+\includegraphics[scale=0.28]{./mesh/newmesh/coarse15}
 \centering
 \caption{Detail of the coarse mesh}
 \label{coarse1}
@@ -501,7 +503,7 @@ geometry
 \end{figure}
 
 \begin{figure}[h!]
-\includegraphics[scale=0.24]{./mesh/newmesh/std2}
+\includegraphics[scale=0.35]{./mesh/newmesh/std2ok}
 \centering
 \caption{Detail of the standard mesh}
 \label{standard2}
@@ -519,7 +521,7 @@ geometry
 \end{figure}
 
 \begin{figure}[h!]
-\includegraphics[scale=0.24]{./mesh/newmesh/dense2}
+\includegraphics[scale=0.4]{./mesh/newmesh/dense2ok}
 \centering
 \caption{Detail of the dense mesh}
 \label{dense3}
