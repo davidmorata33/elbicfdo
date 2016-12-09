@@ -6,6 +6,11 @@ Jordi Casacuberta.
   using OpenFOAM}.
 \newblock 2014.
 
+\bibitem{Feedback}
+Learner Feedback.
+\newblock {Running in parallel}.
+\newblock pages 45--54.
+
 \bibitem{Nozaki9240}
 Fumiya Nozaki.
 \newblock {CFD for Rotating Machinery}.
@@ -18,7 +23,7 @@ Eric Paterson.
 
 \bibitem{Petit2011}
 Olivier Petit.
-\newblock {mesh generation . Different ways of creating the mesh . Outline}.
+\newblock {Mesh generation: different ways of creating the mesh.}
 \newblock 2011.
 
 \bibitem{Pieri2014}
@@ -26,9 +31,9 @@ Roberto Pieri.
 \newblock {A tool for pre-processing : snappyHexMesh}.
 \newblock (June), 2014.
 
-\bibitem{Feedback}
-Learner Feedback.
-\newblock {Running in parallel}.
-\newblock pages 45--54.
+\bibitem{Rygg2013}
+Jone~Rivrud Rygg.
+\newblock {CFD Analysis of a Pelton Turbine in OpenFOAM}.
+\newblock {\em Thesis}, (June):119, 2013.
 
 \end{thebibliography}
