@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.9.26)  9 DEC 2016 16:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.9.26)  9 DEC 2016 17:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1648,7 +1648,7 @@ LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 11.
 File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 (./doc_config/cover.tex
-<./doc_config/images/openfoamlogotm.png, id=341, 845.1575pt x 144.54pt>
+<./doc_config/images/openfoamlogotm.png, id=349, 845.1575pt x 144.54pt>
 File: ./doc_config/images/openfoamlogotm.png Graphic file (type png)
 
 <use ./doc_config/images/openfoamlogotm.png>
@@ -1656,7 +1656,7 @@ Package pdftex.def Info: ./doc_config/images/openfoamlogotm.png used on input l
 ine 11.
 (pdftex.def)             Requested size: 195.0pt x 33.34935pt.
 
-<./doc_config/images/UPC_ESEIAAT.jpg, id=342, 782.925pt x 145.54375pt>
+<./doc_config/images/UPC_ESEIAAT.jpg, id=350, 782.925pt x 145.54375pt>
 File: ./doc_config/images/UPC_ESEIAAT.jpg Graphic file (type jpg)
 
 <use ./doc_config/images/UPC_ESEIAAT.jpg>
@@ -1711,7 +1711,7 @@ Package hyperref Warning: Difference (2) between bookmark levels is greater
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 5.
 
-<./img/TurbofanEtapas.png, id=385, 875.27pt x 579.16376pt>
+<./img/TurbofanEtapas.png, id=394, 875.27pt x 579.16376pt>
 File: ./img/TurbofanEtapas.png Graphic file (type png)
 
 <use ./img/TurbofanEtapas.png>
@@ -1725,7 +1725,7 @@ Overfull \hbox (3.86786pt too wide) in paragraph at lines 9--10
 [3
 
  <./img/TurbofanEtapas.png>]
-<./img/Turbofan.png, id=396, 722.7pt x 354.57469pt>
+<./img/Turbofan.png, id=405, 722.7pt x 354.57469pt>
 File: ./img/Turbofan.png Graphic file (type png)
  <use ./img/Turbofan.png>
 Package pdftex.def Info: ./img/Turbofan.png used on input line 18.
@@ -1742,7 +1742,7 @@ File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 28.
  [4 <./img/Turbofan.png>]) [5] (./sections/Preprocess.tex (./sections/Mesh.tex
-<./img/geometryAxes.png, id=407, 1168.365pt x 835.12pt>
+<./img/geometryAxes.png, id=416, 1168.365pt x 835.12pt>
 File: ./img/geometryAxes.png Graphic file (type png)
 
 <use ./img/geometryAxes.png>
@@ -1868,7 +1868,7 @@ Overfull \hbox (29.99878pt too wide) in paragraph at lines 195--195
 stem/blockMeshDict"[] 
  []
 
-[11] <./mesh/screenshots/blockmesh.png, id=439, 1565.85pt x 863.225pt>
+[11] <./mesh/screenshots/blockmesh.png, id=448, 1565.85pt x 863.225pt>
 File: ./mesh/screenshots/blockmesh.png Graphic file (type png)
 
 <use ./mesh/screenshots/blockmesh.png>
@@ -1884,74 +1884,78 @@ Overfull \hbox (17.1114pt too wide) in paragraph at lines 248--250
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [12] [13 <./mesh/screenshots/blockmesh.png (PNG copy)>]
-Overfull \hbox (3.74886pt too wide) in paragraph at lines 307--307
+Overfull \hbox (29.99878pt too wide) in paragraph at lines 295--295
+[]    \T1/lmtt/m/n/10 AMI.stl    //used for the dynamic mesh (the domain where 
+the mesh  rotating)[] 
+ []
+
+[14]
+Overfull \hbox (3.74886pt too wide) in paragraph at lines 316--316
 []    \T1/lmtt/m/n/10 // Overall cell limit (approximately). Refinement will st
 op immediately[] 
  []
 
 
-Overfull \hbox (3.74886pt too wide) in paragraph at lines 309--309
+Overfull \hbox (3.74886pt too wide) in paragraph at lines 318--318
 []    \T1/lmtt/m/n/10 // Note that this is the number of cells before removing 
 the part which[] 
  []
 
 
-Overfull \hbox (3.74886pt too wide) in paragraph at lines 310--310
+Overfull \hbox (3.74886pt too wide) in paragraph at lines 319--319
 []    \T1/lmtt/m/n/10 // is not 'visible' from the keepPoint. The final number 
 of cells might[] 
  []
 
-[14]
-Overfull \hbox (19.49881pt too wide) in paragraph at lines 323--323
+
+Overfull \hbox (19.49881pt too wide) in paragraph at lines 332--332
 []    \T1/lmtt/m/n/10 // Specifies two levels for every surface. The first is t
 he minimum level,[] 
  []
 
 
-Overfull \hbox (19.49881pt too wide) in paragraph at lines 324--324
+Overfull \hbox (19.49881pt too wide) in paragraph at lines 333--333
 []    \T1/lmtt/m/n/10 // every cell intersecting a surface gets refined up to t
 he minimum level.[] 
  []
 
 [15] [16]
-Overfull \hbox (14.24883pt too wide) in paragraph at lines 417--417
+Overfull \hbox (14.24883pt too wide) in paragraph at lines 426--426
 []    \T1/lmtt/m/n/10 // NOTE: This point should never be on a face, always ins
 ide a cell, even[] 
  []
 
-[17] [18] <./mesh/screenshots/coarse2.png, id=472, 1565.85pt x 863.225pt>
-File: ./mesh/screenshots/coarse2.png Graphic file (type png)
+[17] [18] [19] <./mesh/newmesh/coarse15.png, id=486, 1310.8975pt x 833.1125pt>
+File: ./mesh/newmesh/coarse15.png Graphic file (type png)
 
-<use ./mesh/screenshots/coarse2.png>
-Package pdftex.def Info: ./mesh/screenshots/coarse2.png used on input line 467.
+<use ./mesh/newmesh/coarse15.png>
+Package pdftex.def Info: ./mesh/newmesh/coarse15.png used on input line 475.
+(pdftex.def)             Requested size: 327.72357pt x 208.27762pt.
 
-(pdftex.def)             Requested size: 375.81168pt x 207.17824pt.
+<./mesh/newmesh/coarse19.png, id=487, 1119.18124pt x 833.1125pt>
+File: ./mesh/newmesh/coarse19.png Graphic file (type png)
 
-<./mesh/screenshots/coarse3.png, id=473, 1565.85pt x 863.225pt>
-File: ./mesh/screenshots/coarse3.png Graphic file (type png)
-
-<use ./mesh/screenshots/coarse3.png>
-Package pdftex.def Info: ./mesh/screenshots/coarse3.png used on input line 474.
-
-(pdftex.def)             Requested size: 375.81168pt x 207.17824pt.
- [19 <./mesh/screenshots/coarse2.png (PNG copy)> <./mesh/screenshots/coarse3.pn
-g (PNG copy)>]
-<./mesh/screenshots/std2.png, id=483, 1565.85pt x 863.225pt>
+<use ./mesh/newmesh/coarse19.png>
+Package pdftex.def Info: ./mesh/newmesh/coarse19.png used on input line 482.
+(pdftex.def)             Requested size: 279.79462pt x 208.27762pt.
+ [20 <./mesh/newmesh/coarse15.png (PNG copy)> <./mesh/newmesh/coarse19.png (PNG
+ copy)>]
+<./mesh/screenshots/std2.png, id=496, 1565.85pt x 863.225pt>
 File: ./mesh/screenshots/std2.png Graphic file (type png)
 
 <use ./mesh/screenshots/std2.png>
-Package pdftex.def Info: ./mesh/screenshots/std2.png used on input line 485.
+Package pdftex.def Info: ./mesh/screenshots/std2.png used on input line 493.
 (pdftex.def)             Requested size: 375.81168pt x 207.17824pt.
 
-<./mesh/screenshots/std3.png, id=484, 1565.85pt x 863.225pt>
+<./mesh/screenshots/std3.png, id=497, 1565.85pt x 863.225pt>
 File: ./mesh/screenshots/std3.png Graphic file (type png)
 
 <use ./mesh/screenshots/std3.png>
-Package pdftex.def Info: ./mesh/screenshots/std3.png used on input line 492.
+Package pdftex.def Info: ./mesh/screenshots/std3.png used on input line 500.
 (pdftex.def)             Requested size: 375.81168pt x 207.17824pt.
- [20 <./mesh/screenshots/std2.png (PNG copy)> <./mesh/screenshots/std3.png (PNG
+ [21 <./mesh/screenshots/std2.png (PNG copy)> <./mesh/screenshots/std3.png (PNG
  copy)>]
-<./mesh/screenshots/Xtreme3.png, id=493, 1565.85pt x 863.225pt>
+<./mesh/screenshots/Xtreme3.png, id=506, 1565.85pt x 863.225pt>
 File: ./mesh/screenshots/Xtreme3.png Graphic file (type png)
 
 <use ./mesh/screenshots/Xtreme3.png>
@@ -1959,15 +1963,15 @@ Package pdftex.def Info: ./mesh/screenshots/Xtreme3.png used on input line 511.
 
 (pdftex.def)             Requested size: 375.81168pt x 207.17824pt.
 
-<./mesh/screenshots/Xtreme5.png, id=494, 1565.85pt x 863.225pt>
+<./mesh/screenshots/Xtreme5.png, id=507, 1565.85pt x 863.225pt>
 File: ./mesh/screenshots/Xtreme5.png Graphic file (type png)
 
 <use ./mesh/screenshots/Xtreme5.png>
 Package pdftex.def Info: ./mesh/screenshots/Xtreme5.png used on input line 518.
 
 (pdftex.def)             Requested size: 375.81168pt x 207.17824pt.
- [21 <./mesh/screenshots/Xtreme3.png (PNG copy)> <./mesh/screenshots/Xtreme5.pn
-g (PNG copy)>]) [22]
+ [22 <./mesh/screenshots/Xtreme3.png (PNG copy)> <./mesh/screenshots/Xtreme5.pn
+g (PNG copy)>]) [23]
 (./sections/Rotation.tex
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
@@ -2021,7 +2025,7 @@ Overfull \hbox (24.7488pt too wide) in paragraph at lines 26--26
 ----------------*/[] 
  []
 
-[23]
+[24]
 Overfull \hbox (24.7488pt too wide) in paragraph at lines 35--35
 []\T1/lmtt/m/n/10 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 * * * * * * * * //[] 
@@ -2033,12 +2037,12 @@ Overfull \hbox (24.7488pt too wide) in paragraph at lines 52--52
 *************** //[] 
  []
 
-) [24] (./sections/Boundaryconditions.tex
+) [25] (./sections/Boundaryconditions.tex
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 3.
 
-[25]
+[26]
 Overfull \hbox (24.7488pt too wide) in paragraph at lines 60--60
 []\T1/lmtt/m/n/10 /*--------------------------------*- C++ -*------------------
 ----------------*\[] 
@@ -2086,7 +2090,7 @@ Overfull \hbox (24.7488pt too wide) in paragraph at lines 74--74
 * * * * * * * * //[] 
  []
 
-[26]
+[27]
 Overfull \hbox (24.7488pt too wide) in paragraph at lines 104--104
 []\T1/lmtt/m/n/10 // **********************************************************
 *************** //[] 
@@ -2134,7 +2138,7 @@ Overfull \hbox (24.7488pt too wide) in paragraph at lines 119--119
 ----------------*/[] 
  []
 
-[27]
+[28]
 Overfull \hbox (24.7488pt too wide) in paragraph at lines 127--127
 []\T1/lmtt/m/n/10 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 * * * * * * * * //[] 
@@ -2146,7 +2150,7 @@ Overfull \hbox (24.7488pt too wide) in paragraph at lines 157--157
 *************** //[] 
  []
 
-) [28] (./sections/Transportproperties.tex
+) [29] (./sections/Transportproperties.tex
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 2.
@@ -2229,7 +2233,7 @@ Overfull \hbox (24.7488pt too wide) in paragraph at lines 38--38
                  |[] 
  []
 
-[29]
+[30]
 Overfull \hbox (24.7488pt too wide) in paragraph at lines 39--39
 []\T1/lmtt/m/n/10 | \\      /  F ield         | OpenFOAM: The Open Source CFD T
 oolbox           |[] 
@@ -2271,12 +2275,12 @@ Overfull \hbox (24.7488pt too wide) in paragraph at lines 64--64
 *************** //[] 
  []
 
-) [30] (./sections/Control.tex
+) [31] (./sections/Control.tex
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 2.
 
-[31]
+[32]
 Overfull \hbox (24.7488pt too wide) in paragraph at lines 51--51
 []\T1/lmtt/m/n/10 /*--------------------------------*- C++ -*------------------
 ----------------*\[] 
@@ -2324,13 +2328,13 @@ Overfull \hbox (24.7488pt too wide) in paragraph at lines 65--65
 * * * * * * * * //[] 
  []
 
-[32]
+[33]
 Overfull \hbox (24.7488pt too wide) in paragraph at lines 106--106
 []\T1/lmtt/m/n/10 // **********************************************************
 *************** //[] 
  []
 
-) [33] (./sections/SchemesandSolution.tex
+) [34] (./sections/SchemesandSolution.tex
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 3.
@@ -2383,7 +2387,7 @@ Overfull \hbox (24.7488pt too wide) in paragraph at lines 21--21
 * * * * * * * * //[] 
  []
 
-[34]
+[35]
 Overfull \hbox (24.7488pt too wide) in paragraph at lines 64--64
 []\T1/lmtt/m/n/10 // **********************************************************
 *************** //[] 
@@ -2431,24 +2435,24 @@ Overfull \hbox (24.7488pt too wide) in paragraph at lines 82--82
 ----------------*/[] 
  []
 
-[35]
+[36]
 Overfull \hbox (24.7488pt too wide) in paragraph at lines 90--90
 []\T1/lmtt/m/n/10 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 * * * * * * * * //[] 
  []
 
-[36]
+[37]
 Overfull \hbox (24.7488pt too wide) in paragraph at lines 161--161
 []\T1/lmtt/m/n/10 // **********************************************************
 *************** //[] 
  []
 
-)) [37] (./sections/simulation.tex (./sections/solver.tex
+)) [38] (./sections/simulation.tex (./sections/solver.tex
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 3.
 
-) [38
+) [39
 
 ] (./sections/Runapplication.tex
 
@@ -2461,21 +2465,21 @@ Underfull \hbox (badness 1072) in paragraph at lines 17--18
 e-com-posePar \T1/lmr/m/n/12 and the \T1/lmr/m/it/12 -p\T1/lmr/m/n/12 ).
  []
 
-)) [39] (./sections/postprocess.tex [40
+)) [40] (./sections/postprocess.tex [41
 
 ] (./sections/results.tex
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 3.
 
-) [41] (./sections/conclusions.tex
+) [42] (./sections/conclusions.tex
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 3.
 
-)) (./Report.bbl [42]) 
+)) (./Report.bbl [43]) 
 AED: lastpage setting LastPage
-[43
+[44
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 49.
@@ -2483,25 +2487,15 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 49.
  (./Report.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 49.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 49.
-
-
-Package rerunfilecheck Warning: File `Report.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Report.out':
-(rerunfilecheck)             Before: E0DE9A37E9C7B970CD5714EE5541290A;4762
-(rerunfilecheck)             After:  9455F8A7600EFECE9E8CCB896770921C;4808.
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
+Package rerunfilecheck Info: File `Report.out' has not changed.
+(rerunfilecheck)             Checksum: 690A36BC22573F110ED8EFDACC503C6E;4865.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 49.
  ) 
 Here is how much of TeX's memory you used:
- 28573 strings out of 493014
- 538566 string characters out of 6133351
- 603000 words of memory out of 5000000
- 31495 multiletter control sequences out of 15000+600000
+ 28578 strings out of 493014
+ 538601 string characters out of 6133351
+ 603225 words of memory out of 5000000
+ 31497 multiletter control sequences out of 15000+600000
  52221 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,7n,77p,10480b,905s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2518,10 +2512,10 @@ dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2016/texmf-dist/fonts
 /type1/public/lm/lmsy8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/publ
 ic/lm/lmtt10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmtt
 12.pfb>
-Output written on Report.pdf (44 pages, 1753300 bytes).
+Output written on Report.pdf (45 pages, 1669958 bytes).
 PDF statistics:
- 682 PDF objects out of 1000 (max. 8388607)
- 605 compressed objects within 7 object streams
- 148 named destinations out of 1000 (max. 500000)
- 733 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 694 PDF objects out of 1000 (max. 8388607)
+ 616 compressed objects within 7 object streams
+ 150 named destinations out of 1000 (max. 500000)
+ 749 words of extra memory for PDF output out of 10000 (max. 10000000)
 
