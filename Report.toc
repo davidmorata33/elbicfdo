@@ -47,43 +47,43 @@
 \contentsline {paragraph}{}{23}{section*.44}
 \contentsline {subsection}{\numberline {3.2}checkMesh}{25}{subsection.3.2}
 \contentsline {paragraph}{}{25}{section*.45}
-\contentsline {subsection}{\numberline {3.3}Rotation}{26}{subsection.3.3}
-\contentsline {paragraph}{}{26}{section*.46}
-\contentsline {paragraph}{}{26}{section*.47}
-\contentsline {paragraph}{}{27}{section*.49}
-\contentsline {paragraph}{}{28}{section*.50}
-\contentsline {paragraph}{}{29}{section*.51}
-\contentsline {subsection}{\numberline {3.4}Boundary conditions}{30}{subsection.3.4}
-\contentsline {subsubsection}{\numberline {3.4.1}Velocity}{30}{subsubsection.3.4.1}
-\contentsline {paragraph}{}{30}{section*.52}
-\contentsline {paragraph}{}{31}{section*.53}
-\contentsline {subsubsection}{\numberline {3.4.2}Pressure}{32}{subsubsection.3.4.2}
-\contentsline {paragraph}{}{32}{section*.54}
-\contentsline {paragraph}{}{33}{section*.55}
-\contentsline {paragraph}{}{33}{section*.56}
-\contentsline {subsection}{\numberline {3.5}Properties of the flow}{34}{subsection.3.5}
-\contentsline {paragraph}{}{34}{section*.57}
-\contentsline {paragraph}{}{34}{section*.58}
-\contentsline {paragraph}{}{35}{section*.59}
-\contentsline {subsection}{\numberline {3.6}ControlDict}{36}{subsection.3.6}
-\contentsline {paragraph}{}{36}{section*.60}
-\contentsline {paragraph}{}{36}{section*.61}
-\contentsline {paragraph}{}{37}{section*.62}
-\contentsline {subsection}{\numberline {3.7}fvSchemes and fvSolution}{39}{subsection.3.7}
-\contentsline {paragraph}{}{39}{section*.63}
-\contentsline {paragraph}{}{40}{section*.64}
-\contentsline {section}{\numberline {4}Simulation of the turbofan}{43}{section.4}
-\contentsline {subsection}{\numberline {4.1}Selection of the solver}{43}{subsection.4.1}
-\contentsline {paragraph}{}{43}{section*.65}
-\contentsline {paragraph}{}{43}{section*.66}
-\contentsline {subsection}{\numberline {4.2}Commands to run the simulation}{44}{subsection.4.2}
-\contentsline {paragraph}{}{44}{section*.67}
-\contentsline {paragraph}{}{44}{section*.68}
-\contentsline {paragraph}{}{44}{section*.69}
-\contentsline {paragraph}{}{44}{section*.70}
-\contentsline {section}{\numberline {5}Post-process}{45}{section.5}
-\contentsline {subsection}{\numberline {5.1}Analysis of the results}{46}{subsection.5.1}
-\contentsline {paragraph}{}{46}{section*.71}
-\contentsline {subsection}{\numberline {5.2}Conclusions}{47}{subsection.5.2}
-\contentsline {paragraph}{}{47}{section*.72}
-\contentsline {section}{\numberline {6}References}{48}{section.6}
+\contentsline {subsection}{\numberline {3.3}Rotation}{28}{subsection.3.3}
+\contentsline {paragraph}{}{28}{section*.46}
+\contentsline {paragraph}{}{28}{section*.47}
+\contentsline {paragraph}{}{29}{section*.49}
+\contentsline {paragraph}{}{30}{section*.50}
+\contentsline {paragraph}{}{31}{section*.51}
+\contentsline {subsection}{\numberline {3.4}Boundary conditions}{32}{subsection.3.4}
+\contentsline {subsubsection}{\numberline {3.4.1}Velocity}{32}{subsubsection.3.4.1}
+\contentsline {paragraph}{}{32}{section*.52}
+\contentsline {paragraph}{}{33}{section*.53}
+\contentsline {subsubsection}{\numberline {3.4.2}Pressure}{34}{subsubsection.3.4.2}
+\contentsline {paragraph}{}{34}{section*.54}
+\contentsline {paragraph}{}{35}{section*.55}
+\contentsline {paragraph}{}{35}{section*.56}
+\contentsline {subsection}{\numberline {3.5}Properties of the flow}{36}{subsection.3.5}
+\contentsline {paragraph}{}{36}{section*.57}
+\contentsline {paragraph}{}{36}{section*.58}
+\contentsline {paragraph}{}{37}{section*.59}
+\contentsline {subsection}{\numberline {3.6}ControlDict}{38}{subsection.3.6}
+\contentsline {paragraph}{}{38}{section*.60}
+\contentsline {paragraph}{}{38}{section*.61}
+\contentsline {paragraph}{}{39}{section*.62}
+\contentsline {subsection}{\numberline {3.7}fvSchemes and fvSolution}{41}{subsection.3.7}
+\contentsline {paragraph}{}{41}{section*.63}
+\contentsline {paragraph}{}{42}{section*.64}
+\contentsline {section}{\numberline {4}Simulation of the turbofan}{45}{section.4}
+\contentsline {subsection}{\numberline {4.1}Selection of the solver}{45}{subsection.4.1}
+\contentsline {paragraph}{}{45}{section*.65}
+\contentsline {paragraph}{}{45}{section*.66}
+\contentsline {subsection}{\numberline {4.2}Commands to run the simulation}{46}{subsection.4.2}
+\contentsline {paragraph}{}{46}{section*.67}
+\contentsline {paragraph}{}{46}{section*.68}
+\contentsline {paragraph}{}{46}{section*.69}
+\contentsline {paragraph}{}{46}{section*.70}
+\contentsline {section}{\numberline {5}Post-process}{47}{section.5}
+\contentsline {subsection}{\numberline {5.1}Analysis of the results}{48}{subsection.5.1}
+\contentsline {paragraph}{}{48}{section*.71}
+\contentsline {subsection}{\numberline {5.2}Conclusions}{49}{subsection.5.2}
+\contentsline {paragraph}{}{49}{section*.72}
+\contentsline {section}{\numberline {6}References}{50}{section.6}

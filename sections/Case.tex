@@ -25,15 +25,13 @@
 \paragraph{}Given that we are not able to use a supercomputer and the computational power that is available to us is very limited since we are using our own personal computers to run this simulation, several hypotheses have to be made to alleviate the calculation time, as mentioned before. Some of them can be assumed and some other will make the case a non-realistic project. These hypotheses are presented below.
 
 \begin{itemize}
-	\item Viscous flow
 	\item Incompressible flow
 	\item Newtonian flow
-	\item Transient flow
 	\item Laminar flow
 \end{itemize}
 
 \paragraph{}Clearly, the flow is not incompressible in reality; the aim of the turbofan is to compress the air to seek for a more efficient combustion. However, all of the compressible solvers are really difficult to use and the computational time is also higher given that we have a high number of control volumes (as discussed in the next section) due to a really complex geometry. Thus, although it will not be a completely real flow, we will be also able to see how the low pressure section of the engine increases the pressure of the flow and how the velocity field changes as it goes through the turbine.
 
-\paragraph{}The simulation will take into account that it is a tridimensional, that it behaves as a newtonian fluid and it will be run under transient flow conditions (that is: the flow presents changes in its characteristics over time). With these hypothesis, we can begin to discuss the geometry of the \textit{blockMesh} as well as the refined mesh and the boundary conditions and final results within the next sections.
+\paragraph{}The simulation will take into account that it is a tridimensional flow, also that it behaves as a newtonian fluid and it will be run under transient flow conditions (that is: the velocity field as well as the values of the pressure change over time). With these hypothesis, we can begin to discuss the geometry of the \textit{blockMesh} as well as the refined mesh, and the boundary conditions and final results in the next sections.
 
 \paragraph{}Finally, given that it is a fictional case, no validations of the solution will be performed.

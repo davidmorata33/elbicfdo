@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.9.26)  9 DEC 2016 19:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.9.26)  9 DEC 2016 19:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1664,12 +1664,12 @@ Package pdftex.def Info: ./doc_config/images/UPC_ESEIAAT.jpg used on input line
  19.
 (pdftex.def)             Requested size: 155.99762pt x 28.9994pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 41--42
+Underfull \hbox (badness 10000) in paragraph at lines 43--44
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--53
+Underfull \hbox (badness 10000) in paragraph at lines 49--55
 
  []
 
@@ -2034,17 +2034,143 @@ Overfull \hbox (24.7488pt too wide) in paragraph at lines 551--551
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 3.
 
-) [25] (./sections/Rotation.tex
+
+Overfull \hbox (24.7488pt too wide) in paragraph at lines 7--7
+[]\T1/lmtt/m/n/10 /*-----------------------------------------------------------
+----------------*\[] 
+ []
+
+
+Overfull \hbox (24.7488pt too wide) in paragraph at lines 8--8
+[]\T1/lmtt/m/n/10 | =========                 |                                
+                 |[] 
+ []
+
+
+Overfull \hbox (24.7488pt too wide) in paragraph at lines 9--9
+[]\T1/lmtt/m/n/10 | \\      /  F ield         | OpenFOAM: The Open Source CFD T
+oolbox           |[] 
+ []
+
+
+Overfull \hbox (24.7488pt too wide) in paragraph at lines 10--10
+[]\T1/lmtt/m/n/10 |  \\    /   O peration     | Version:  4.0                  
+                 |[] 
+ []
+
+
+Overfull \hbox (24.7488pt too wide) in paragraph at lines 11--11
+[]\T1/lmtt/m/n/10 |   \\  /    A nd           | Web:      www.OpenFOAM.org     
+                 |[] 
+ []
+
+
+Overfull \hbox (24.7488pt too wide) in paragraph at lines 12--12
+[]\T1/lmtt/m/n/10 |    \\/     M anipulation  |                                
+                 |[] 
+ []
+
+
+Overfull \hbox (24.7488pt too wide) in paragraph at lines 13--13
+[]\T1/lmtt/m/n/10 \*-----------------------------------------------------------
+----------------*/[] 
+ []
+
+
+Overfull \hbox (45.74873pt too wide) in paragraph at lines 23--23
+[]\T1/lmtt/m/n/10 fileModificationChecking : Monitoring run-time modified files
+ using timeStampMaster[] 
+ []
+
+
+Overfull \hbox (24.7488pt too wide) in paragraph at lines 26--26
+[]\T1/lmtt/m/n/10 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+* * * * * * * * //[] 
+ []
+
+
+Overfull \hbox (161.2484pt too wide) in paragraph at lines 30--30
+[]    \T1/lmtt/m/n/10 From function static Foam::instantList Foam::timeSelector
+::select0(Foam::Time&, const Foam::argList&)[] 
+ []
+
+[25] [26]
+Overfull \hbox (8.99884pt too wide) in paragraph at lines 84--84
+[]                   \T1/lmtt/m/n/10 Patch    Faces   Points                  S
+urface topology[] 
+ []
+
+
+Overfull \hbox (8.99884pt too wide) in paragraph at lines 85--85
+[]                   \T1/lmtt/m/n/10 inlet    11685    12488  ok (non-closed si
+ngly connected)[] 
+ []
+
+
+Overfull \hbox (8.99884pt too wide) in paragraph at lines 86--86
+[]                  \T1/lmtt/m/n/10 outlet     6410     7707  ok (non-closed si
+ngly connected)[] 
+ []
+
+
+Overfull \hbox (8.99884pt too wide) in paragraph at lines 87--87
+[]                 \T1/lmtt/m/n/10 LPSpool   537648   631640  ok (non-closed si
+ngly connected)[] 
+ []
+
+
+Overfull \hbox (8.99884pt too wide) in paragraph at lines 88--88
+[]           \T1/lmtt/m/n/10 NacelleStator   172722   217913  multiply connecte
+d (shared edge)[] 
+ []
+
+
+Overfull \hbox (8.99884pt too wide) in paragraph at lines 89--89
+[]                    \T1/lmtt/m/n/10 AMI1     5583     5775  ok (non-closed si
+ngly connected)[] 
+ []
+
+
+Overfull \hbox (8.99884pt too wide) in paragraph at lines 90--90
+[]                    \T1/lmtt/m/n/10 AMI2     5583     5811  ok (non-closed si
+ngly connected)[] 
+ []
+
+
+Overfull \hbox (24.7488pt too wide) in paragraph at lines 94--94
+[]    \T1/lmtt/m/n/10 Overall domain bounding box (0.77 0.115495 0.106656) (1.3
+5 2.21443 2.20599)[] 
+ []
+
+
+Overfull \hbox (92.9986pt too wide) in paragraph at lines 100--100
+[]    \T1/lmtt/m/n/10 Minimum face area = 8.56533e-10. Maximum face area = 0.00
+2683.  Face area magnitudes OK.[] 
+ []
+
+
+Overfull \hbox (124.4985pt too wide) in paragraph at lines 101--101
+[]    \T1/lmtt/m/n/10 Min volume = 1.88435e-09. Max volume = 0.000135167.  Tota
+l volume = 1.87506.  Cell volumes OK.[] 
+ []
+
+
+Overfull \hbox (145.49844pt too wide) in paragraph at lines 105--105
+[] \T1/lmtt/m/n/10 ***Max skewness = 13.9612, 292 highly skew faces detected wh
+ich may impair the quality of the results[] 
+ []
+
+) [27] (./sections/Rotation.tex
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 2.
 
-<./img/AMI.png, id=544, 785.93625pt x 611.28375pt>
+<./img/AMI.png, id=553, 785.93625pt x 611.28375pt>
 File: ./img/AMI.png Graphic file (type png)
  <use ./img/AMI.png>
 Package pdftex.def Info: ./img/AMI.png used on input line 8.
 (pdftex.def)             Requested size: 353.66805pt x 275.07515pt.
- [26 <./img/AMI.png>]
+ [28 <./img/AMI.png>]
 Overfull \hbox (24.7488pt too wide) in paragraph at lines 18--18
 []\T1/lmtt/m/n/10 /*--------------------------------*- C++ -*------------------
 ----------------*\ 
@@ -2092,7 +2218,7 @@ Overfull \hbox (24.7488pt too wide) in paragraph at lines 33--33
 * * * * * * * * //[] 
  []
 
-[27]
+[29]
 Overfull \hbox (24.7488pt too wide) in paragraph at lines 53--53
 []\T1/lmtt/m/n/10 // **********************************************************
 *************** //[] 
@@ -2152,13 +2278,13 @@ Overfull \hbox (8.99884pt too wide) in paragraph at lines 78--78
 coupled patches[] 
  []
 
-[28]
+[30]
 Overfull \hbox (24.7488pt too wide) in paragraph at lines 114--114
 []\T1/lmtt/m/n/10 // **********************************************************
 *************** //[] 
  []
 
-) [29] (./sections/Boundaryconditions.tex
+) [31] (./sections/Boundaryconditions.tex
 Overfull \hbox (24.7488pt too wide) in paragraph at lines 10--10
 []\T1/lmtt/m/n/10 /*--------------------------------*- C++ -*------------------
 ----------------*\ 
@@ -2206,13 +2332,13 @@ Overfull \hbox (24.7488pt too wide) in paragraph at lines 25--25
 * * * * * * * * //[] 
  []
 
-[30]
+[32]
 Overfull \hbox (24.7488pt too wide) in paragraph at lines 66--66
 []\T1/lmtt/m/n/10 // **********************************************************
 *************** //[] 
  []
 
-[31]
+[33]
 Overfull \hbox (24.7488pt too wide) in paragraph at lines 78--78
 []\T1/lmtt/m/n/10 /*--------------------------------*- C++ -*------------------
 ----------------*\ 
@@ -2260,13 +2386,13 @@ Overfull \hbox (24.7488pt too wide) in paragraph at lines 93--93
 * * * * * * * * //[] 
  []
 
-[32]
+[34]
 Overfull \hbox (24.7488pt too wide) in paragraph at lines 131--131
 []\T1/lmtt/m/n/10 // **********************************************************
 *************** //[] 
  []
 
-) [33] (./sections/Transportproperties.tex
+) [35] (./sections/Transportproperties.tex
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 3.
@@ -2361,7 +2487,7 @@ Overfull \hbox (24.7488pt too wide) in paragraph at lines 41--41
                  |[] 
  []
 
-[34]
+[36]
 Overfull \hbox (24.7488pt too wide) in paragraph at lines 42--42
 []\T1/lmtt/m/n/10 |    \\/     M anipulation  |                                
                  |[] 
@@ -2385,12 +2511,12 @@ Overfull \hbox (24.7488pt too wide) in paragraph at lines 57--57
 *************** //[] 
  []
 
-) [35] (./sections/Control.tex
+) [37] (./sections/Control.tex
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 2.
 
-[36]
+[38]
 Overfull \hbox (24.7488pt too wide) in paragraph at lines 49--49
 []\T1/lmtt/m/n/10 /*--------------------------------*- C++ -*------------------
 ----------------*\ 
@@ -2438,13 +2564,13 @@ Overfull \hbox (24.7488pt too wide) in paragraph at lines 64--64
 * * * * * * * * //[] 
  []
 
-[37]
+[39]
 Overfull \hbox (24.7488pt too wide) in paragraph at lines 100--100
 []\T1/lmtt/m/n/10 // **********************************************************
 *************** //[] 
  []
 
-) [38] (./sections/SchemesandSolution.tex
+) [40] (./sections/SchemesandSolution.tex
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 3.
@@ -2497,7 +2623,7 @@ Overfull \hbox (24.7488pt too wide) in paragraph at lines 22--22
 * * * * * * * * //[] 
  []
 
-[39]
+[41]
 Overfull \hbox (24.7488pt too wide) in paragraph at lines 60--60
 []\T1/lmtt/m/n/10 // **********************************************************
 *************** //[] 
@@ -2545,24 +2671,24 @@ Overfull \hbox (24.7488pt too wide) in paragraph at lines 78--78
 ----------------*/[] 
  []
 
-[40]
+[42]
 Overfull \hbox (24.7488pt too wide) in paragraph at lines 86--86
 []\T1/lmtt/m/n/10 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 * * * * * * * * //[] 
  []
 
-[41]
+[43]
 Overfull \hbox (24.7488pt too wide) in paragraph at lines 150--150
 []\T1/lmtt/m/n/10 // **********************************************************
 *************** //[] 
  []
 
-)) [42] (./sections/simulation.tex (./sections/solver.tex
+)) [44] (./sections/simulation.tex (./sections/solver.tex
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 3.
 
-) [43
+) [45
 
 ] (./sections/Runapplication.tex
 
@@ -2575,21 +2701,21 @@ Underfull \hbox (badness 1072) in paragraph at lines 17--18
 e-com-posePar \T1/lmr/m/n/12 and the \T1/lmr/m/it/12 -p\T1/lmr/m/n/12 ).
  []
 
-)) [44] (./sections/postprocess.tex [45
+)) [46] (./sections/postprocess.tex [47
 
 ] (./sections/results.tex
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 3.
 
-) [46] (./sections/conclusions.tex
+) [48] (./sections/conclusions.tex
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 3.
 
-)) (./Report.bbl [47]) 
+)) (./Report.bbl [49]) 
 AED: lastpage setting LastPage
-[48
+[50
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 49.
@@ -2602,8 +2728,8 @@ Package rerunfilecheck Info: File `Report.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 49.
  ) 
 Here is how much of TeX's memory you used:
- 28598 strings out of 493014
- 538822 string characters out of 6133351
+ 28600 strings out of 493014
+ 538836 string characters out of 6133351
  604279 words of memory out of 5000000
  31505 multiletter control sequences out of 15000+600000
  52221 words of font info for 51 fonts, out of 8000000 for 9000
@@ -2622,10 +2748,10 @@ dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2016/texmf-dist/fonts
 /type1/public/lm/lmsy8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/publ
 ic/lm/lmtt10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmtt
 12.pfb>
-Output written on Report.pdf (49 pages, 1450496 bytes).
+Output written on Report.pdf (51 pages, 1454131 bytes).
 PDF statistics:
- 732 PDF objects out of 1000 (max. 8388607)
- 649 compressed objects within 7 object streams
- 158 named destinations out of 1000 (max. 500000)
+ 740 PDF objects out of 1000 (max. 8388607)
+ 655 compressed objects within 7 object streams
+ 160 named destinations out of 1000 (max. 500000)
  778 words of extra memory for PDF output out of 10000 (max. 10000000)
 
