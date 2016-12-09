@@ -9,9 +9,9 @@
 \paragraph{}The definition of the \textit{blockMeshDict} is the first part that needs to be modified. The \textit{blockMesh} must contain the geometry that has to be simulated and we must have an idea of the vertices of the parallelogram that will contain the first stages of the compressor. In order to do that, the geometry has to be opened using either \textit{Salome} or \textit{Paraview}. Then the axes must be showed and the points have to be written down on the \textit{blockMesh} file.
 
 \begin{figure}
-\includegraphics[scale=0.26]{./mesh/screenshots/blockmesh}
+\includegraphics[scale=0.30]{./img/geometryAxes}
 \centering
-\caption{blockMeshcaption}
+\caption{Turbofan with axes}
 \label{axisparaview}
 \end{figure}
 
@@ -35,7 +35,7 @@ vertices
 
 \paragraph{}It can be clearly seen that the domain of the mesh is a $0.58$x$2.3$x$2.3m$ rectangular prism.
 
-\paragraph{}Once the boundaries of the \textit{blockMesh} are defined, the number of cells that it will have has to be set. It has to be taken into account that a very dense mesh will not be efficient when simulating the case given that we will use the \textit{snappyHexMesh} later and it will be over densified. On the other hand, a very coarse mesh will not be efficient either because additional divisions will have to be set when generating the refined mesh and the computational time might grow. Thus, a solution between a mesh with a very high number of cells and a very low number of cells has to be attained.
+\paragraph{}Once the boundaries of the \textit{blockMesh} are defined, the number of cells that it will have has to be set. It has to be taken into account that a very dense mesh at the beginning will not be efficient when simulating the case given that we will use the \textit{snappyHexMesh} later, so it might be over densified. On the other hand, a very coarse mesh will not be efficient either because additional divisions will have to be set when generating the refined mesh and the computational time of the \textit{snappyHexMesh} process might grow. Thus, a solution between a mesh with a very high number of cells and a very low number of cells has to be attained.
 
 \paragraph{}This basic mesh has been divided every $0.05m$. It means that we have done 12 divisions in the x direction, 46 on the y direction and 46 more on the z direction. 
 
@@ -48,7 +48,7 @@ blocks
 \end{verbatim}
 \end{footnotesize}
 
-\paragraph{}Finally, the differents faces of the mesh must be defined depending on if they are the inlet and outlet faces or the lateral faces.To do this, the vertices are numbered according to their appearance in the \textit{blockMeshDict} and the faces are defined by those numbers. Since, the vertex numeration has been kept the same as the one that comes as default in every tutorial case; it is easier to define the inlet face of the \textit{blockMesh} as well as the outlet face that will be used to define the boundary conditions.
+\paragraph{}Finally, the differents faces of the mesh must be defined depending on whether they are the inlet or outlet faces or the lateral faces of the geometry.To do this, \textit{OpenFOAM} numbers the vertices according to their appearance in the \textit{blockMeshDict} and the faces are defined by four those numbers. Since the vertex numeration has been kept the same as the one that comes as default in every tutorial case; it is easier to define the inlet face of the \textit{blockMesh} (this is: the face in which the flow comes in) as well as the outlet face (this is: the face in which the flow comes out) that will be used to define the boundary conditions later.
 
 \begin{footnotesize}
 \begin{verbatim}
@@ -85,11 +85,10 @@ boundary
 \end{verbatim}
 \end{footnotesize}
 
-\paragraph{}The \textit{blockMesh} file is presented below. This is the final file that has been used to generate the \textit{blockMesh} and it is included in the \textit{.zip} file attached to this report. Only the parameters mentioned above have been modified; the rest is equal to the tutorial case that has been selected.
+\paragraph{}The \textit{blockMeshDict} file is presented below. This is the final file that has been used to generate the \textit{blockMesh} and it is included in the \textit{.zip} file attached to this report. Only the parameters mentioned above have been modified; the rest is equal to the tutorial case that has been selected.
 
 \begin{footnotesize}
 \begin{verbatim}
-  
 /*--------------------------------*- C++ -*----------------------------------*\
 | =========                 |                                                 |
 | \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
@@ -162,31 +161,88 @@ boundary
 );
 
 // ************************************************************************* //
-
 \end{verbatim}
 \end{footnotesize}
 
-\paragraph{}The log obtained when the \textit{blockMesh} has been generated is presented below. As it can be seen, no errors were found during the computation of this basic mesh. We can see that the number of cells is relatively high (\textbf{POSAR N. CELLS}) but perfectly suitable to proceed with the refinement of the mesh. Additionally, a caption of the basic mesh is presented in \ref{blockMeshcaption}.
+\paragraph{}The log obtained when the \textit{blockMesh} has been generated is presented below. As it can be seen, no errors were found during the computation of this basic mesh. The number of cells is relatively high (\textbf{25392}) but perfectly suitable to proceed with the refinement of the mesh. Additionally, a caption of the basic mesh is presented in \ref{blockMeshcaption}.
 
-\texttt{\\*
-Writing polyMesh\\*
-----------------\\*
-Mesh Information\\*
-----------------\\*
-  boundingBox: (0.77 0 0) (1.35 2.3 2.3)\\*
-  nPoints: 28717\\*
-  nCells: 25392\\*
-  nFaces: 79396\\*
-  nInternalFaces: 72956\\*
-----------------\\*
-Patches\\*
-----------------\\*
-  patch 0 (start: 72956 size: 2208) name: frontAndBack\\*
-  patch 1 (start: 75164 size: 2116) name: inlet\\*
-  patch 2 (start: 77280 size: 2116) name: outlet\\
-  \\
-  End
-}
+
+\begin{footnotesize}
+\begin{verbatim}
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  4.0                                   |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : 4.0-665f1db4c1f1
+Exec   : blockMesh
+Date   : Dec 05 2016
+Time   : 14:17:05
+Host   : "victorPC"
+PID    : 4499
+Case   : /home/victor/Desktop/Final/pimpleDyMFoam/turbofan_std
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Creating block mesh from
+    "/home/victor/Desktop/Final/pimpleDyMFoam/turbofan_std/system/blockMeshDict"
+Creating curved edges
+Creating topology blocks
+Creating topology patches
+
+Creating block mesh topology
+
+Check topology
+
+	Basic statistics
+		Number of internal faces : 0
+		Number of boundary faces : 6
+		Number of defined boundary faces : 6
+		Number of undefined boundary faces : 0
+	Checking patch -> block consistency
+
+Creating block offsets
+Creating merge list .
+
+Creating polyMesh from blockMesh
+Creating patches
+Creating cells
+Creating points with scale 1
+    Block 0 cell size :
+        i : 0.0483333 .. 0.0483333
+        j : 0.05 .. 0.05
+        k : 0.05 .. 0.05
+
+
+There are no merge patch pairs edges
+
+Writing polyMesh
+----------------
+Mesh Information
+----------------
+  boundingBox: (0.77 0 0) (1.35 2.3 2.3)
+  nPoints: 28717
+  nCells: 25392
+  nFaces: 79396
+  nInternalFaces: 72956
+----------------
+Patches
+----------------
+  patch 0 (start: 72956 size: 2208) name: frontAndBack
+  patch 1 (start: 75164 size: 2116) name: inlet
+  patch 2 (start: 77280 size: 2116) name: outlet
+
+End
+\end{verbatim}
+\end{footnotesize}
+
 
 \begin{figure}[h!]
 \includegraphics[scale=0.26]{./mesh/screenshots/blockmesh}
